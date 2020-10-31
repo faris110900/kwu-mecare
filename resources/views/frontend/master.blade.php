@@ -31,6 +31,7 @@
     </div>
 
     @include('frontend.include._footer-script')
+    @stack('scripts')
 </body>
 
 </html>

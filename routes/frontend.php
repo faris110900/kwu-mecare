@@ -13,6 +13,7 @@ Route::name('frontend.')->group(function () {
 
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
         Route::get('story', 'StoryController@index')->name('story');
+        Route::get('story/json', 'StoryController@json');
         Route::resource('story', 'StoryController');
     });
 });

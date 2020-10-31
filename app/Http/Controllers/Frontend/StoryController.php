@@ -8,6 +8,8 @@ use App\Models\Story;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Str;
+use Yajra\DataTables\Facades\DataTables;
 
 class StoryController extends Controller
 {
@@ -16,9 +18,15 @@ class StoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function json(){
+        return Datatables::of(Story::all())->make(true);
+    }
+
     public function index()
     {
-        return view('frontend.story.index');
+        $stories = Story::latest()->paginate(10);
+
+        return view('frontend.story.index', compact('stories'));
     }
 
     /**
@@ -42,9 +50,9 @@ class StoryController extends Controller
         Alert::success('Success', 'Berhasil Terupload');
 
         Story::create([
-            'user_id' => Auth::id(),
+            // 'user_id' => Auth::id(),
             'title' => request('title'),
-            'slug' => str_slug(request('title')),
+            'slug' => Str::slug(request('title')),
             'image' => request('image')->store('stories'),
             'content' => request('content'),
         ]);
