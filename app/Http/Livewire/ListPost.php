@@ -37,4 +37,11 @@ class ListPost extends Component
         $this->updateStateId = 0;
 
     }
+
+    public function delete($ceritaId){
+
+        $cerita = Cerita::find($ceritaId)->delete();
+
+        $this->updateStateId = 0;
+    }
 }

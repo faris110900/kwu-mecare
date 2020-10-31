@@ -6,6 +6,7 @@
             <span class="text-xl">{{ $cerita->user->name }}</span>
             <span class="text-gray-600">{{ $cerita->created_at->diffForHumans() }}</span>
             <button wire:click="showUpdateForm({{ $cerita->id }})" class="p-2 bg-teal-600 hover:bg-teal-500 text-white rounded-md" >Edit</button>
+            <button wire:click="delete({{ $cerita->id }})" class="p-2 bg-red-600 hover:bg-red-500 text-white rounded-md" >Delete</button>
         </div>
         @if ($updateStateId !== $cerita->id)
             <span>{{ $cerita->content }}</span>
