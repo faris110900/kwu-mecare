@@ -127,4 +127,5 @@ class StoryController extends Controller
 
         return redirect()->route('frontend.story.index');
     }
+    ,
 }
