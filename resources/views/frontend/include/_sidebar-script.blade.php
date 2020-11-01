@@ -90,13 +90,17 @@
         </form>
         <!-- Navigation -->
         <ul class="navbar-nav">
-          <li class="nav-item  class=" active" ">
+          <li class="nav-item">
           <a class=" nav-link active " href="{{ url('dashboard') }}"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
             </a>
           </li>
           <li class="nav-item">
+            <a class=" nav-link" href="{{ url('/') }}"> <i class="ni ni-collection text-primary"></i> Blog
+              </a>
+            </li>
+          <li class="nav-item">
           <a class="nav-link " href="{{ url('story') }}">
-              <i class="ni ni-planet text-blue"></i> Story
+              <i class="ni ni-single-copy-04 text-primary"></i> Story
             </a>
           </li>
         </ul>

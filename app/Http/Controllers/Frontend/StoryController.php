@@ -24,7 +24,7 @@ class StoryController extends Controller
 
     public function index()
     {
-        $stories = Story::latest()->paginate(10);
+        $stories = Story::orderBy('id', 'asc')->get();
 
         return view('frontend.story.index', compact('stories'));
     }
@@ -47,7 +47,7 @@ class StoryController extends Controller
      */
     public function store()
     {
-        Alert::success('Success', 'Berhasil Terupload');
+        Alert::success('Success', 'Your story now flying');
 
         Story::create([
             // 'user_id' => Auth::id(),
@@ -66,9 +66,9 @@ class StoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Story $story)
     {
-        //
+        return view('frontend.story.show', compact('story'));
     }
 
     /**
@@ -77,9 +77,10 @@ class StoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Story $story)
     {
-        //
+
+        return view('frontend.story.edit', compact('story'));
     }
 
     /**
@@ -89,9 +90,23 @@ class StoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Story $story)
     {
-        //
+        
+        if($story->image){
+            \Storage::delete($story->image);
+        }
+
+        Alert::success('success', 'Your story updated');
+
+        $story->update([
+            'title' => request('title'),
+            'slug' => Str::slug(request('title')),
+            'image' => request('image')->store('stories'),
+            'content' => request('content'),
+        ]);
+
+        return redirect()->route('frontend.story.index');
     }
 
     /**
@@ -100,8 +115,16 @@ class StoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Story $story)
     {
-        //
+
+        $story->delete();
+        Alert::success('Success', 'Story was deleted');
+
+        if($story->image){
+            \Storage::delete($story->image);
+        }
+
+        return redirect()->route('frontend.story.index');
     }
 }
