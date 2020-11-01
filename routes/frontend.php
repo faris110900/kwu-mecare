@@ -5,9 +5,15 @@ use Illuminate\Support\Facades\Route;
 Route::name('frontend.')->group(function () {
     Route::group([
         // 'middleware'    => ['auth', 'checkRole:Admin'],
-        'namespace'     => 'Frontend'
+        'namespace'     => 'Frontend',
+        'middleware' => 'auth'
+        
     ], function () {
-        Route::get('/', function (){
+        // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+        //     return view('dashboard');
+        // })->name('dashboard');
+
+        Route::get('/', function () {
             return view('frontend.dashboard');
         });
 
