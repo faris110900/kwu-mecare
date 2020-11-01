@@ -13,7 +13,7 @@
                         </div>
                         <div class="col-auto">
                             <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                                <i class="fas fa-chart-bar"></i>
+                                <i class="fas fa-book"></i>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-auto">
                             <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                                <i class="fas fa-chart-pie"></i>
+                                <i class="fas fa-users"></i>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="col-auto">
                             <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                                <i class="fas fa-users"></i>
+                                <i class="fas fa-scroll"></i>
                             </div>
                         </div>
                     </div>
