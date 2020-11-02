@@ -18,6 +18,8 @@ Route::name('frontend.')->group(function () {
         })->name('frontend.welcome');
 
         Route::get('welcome', 'HomeController@index')->name('welcome');
+        Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+        //Story Route
         Route::get('story', 'StoryController@index')->name('story');
         Route::get('/story/{story}/delete', 'StoryController@destroy')->name('story.delete');
         Route::resource('story', 'StoryController');
@@ -31,9 +33,11 @@ Route::name('frontend.')->group(function () {
         'middleware' => ['auth', 'role:admin']
     ], function () {
         Route::get('/', function () {
-            return view('frontend.dashboard');
-        })->name('frontend.dashboard');
+            return view('admin.dashboard');
+        })->name('admin.dashboard');
+        
+        Route::get('DashboardAdmin', 'DashboardAdminController@index')->name('admin.dash');
 
-        Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+       
     });
 });
