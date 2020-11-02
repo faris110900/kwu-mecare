@@ -41,6 +41,7 @@
                                 <label class="custom-control-label" for="customCheck1">Remember password</label>
                             </div>
                             <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                            <a href="{{ route('register') }}" class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">Create Account</a>
 
                         </form>
                     </div>
