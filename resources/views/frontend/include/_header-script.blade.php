@@ -7,5 +7,7 @@
   <link href="{{ asset('./argon/assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="{{ asset('/argon/assets/css/argon-dashboard.css?v=1.1.0') }}" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
   
   @stack('header-scripts')
