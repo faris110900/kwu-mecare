@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Story;
 
 class DashboardAdminController extends Controller
 {
@@ -15,7 +16,10 @@ class DashboardAdminController extends Controller
 
     public function index(){
 
-        return view('admin.dashboard');
+        $stories = Story::all();
+        $storiesCount = $stories->count();
+
+        return view('admin.dashboard', compact('storiesCount'));
     }
 
 }
