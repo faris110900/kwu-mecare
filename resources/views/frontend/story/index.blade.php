@@ -1,77 +1,83 @@
 @extends('frontend.master')
 
 @section('content')
+    <div class="row">
+        <div class="col">
+            <div class="card shadow p-3">
+                <div class="card-header border-0 d-flex justify-content-between">
+                    <h3 class="mb-0">Card tables</h3>
 
-    <div class="card mt-3 mb-3 shadow-sm">
-        <div class="card-body">
-            <div class="ml-auto mb-3">
-                <a href="{{ route('frontend.story.create') }}" class="btn btn-primary">Create Story</a>
+                    <a href="{{ route('frontend.story.create') }}" class="btn btn-primary">Create Story</a>
+                </div>
+                <div class="table-responsive">
+                    <table id="storyTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Banner</th>
+                                <th>Content</th>
+                                <th>Created_at</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($stories as $story)
+                                <tr>
+                                    <td>
+                                        <h4>{{ $story->title }}</h4>
+                                    </td>
+                                    <td>
+                                        <img src="{{ asset('storage/' . $story->image) }}" height="90px">
+                                    </td>
+                                    <td>
+                                        @php
+                                        echo Str::limit($story->content, 20);
+                                        @endphp
+                                    </td>
+                                    <td>
+                                        {{ $story->created_at->diffForHumans() }}
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                <a class="dropdown-item"
+                                                    href="{{ route('frontend.story.edit', $story) }}">Edit</a>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('frontend.story.delete', $story->id) }}">Delete</a>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('frontend.story.show', $story) }}">Show</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Title</th>
+                                <th>Banner</th>
+                                <th>Content</th>
+                                <th>Created_at</th>
+                                <th>Actions</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Banner</th>
-                        <th scope="col">Content</th>
-                        <th scope="col">Create At</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($stories as $story)
-                        <tr>
-                            <td>{{ $story->id }}</td>
-                            <td> 
-                                <img src="{{ asset('storage/'.$story->image) }}" height="90px">
-                            </td>
-                            <td>{{ $story->title }}</td>
-                            <td>
-                                @php
-                                    echo Str::limit($story->content, 20);
-                                @endphp
-                            </td>
-                            <td>{{ $story->created_at->diffForHumans() }}</td>
-                            <td>
-                            <a href="{{ route('frontend.story.show', $story) }}"><i class="fas fa-eye fa-2x"></i></a>
-                            <a href="{{ route('frontend.story.edit', $story) }}" class="ml-1 text-success"><i class="fas fa-edit fa-2x"></i></a>
-                            <a href="{{ route('frontend.story.delete', $story->id) }}" class="ml-1 text-danger"><i class="fas fa-trash fa-2x"></i></a>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
         </div>
     </div>
 
 @endsection
 
-{{-- @push('scripts')
-<script>
-    $(function() {
-        $('#table-story').DataTable({
-            processing: true,
-            serverSide: true,
-            ajax: 'story/json',
-            columns: [{
-                    data: 'id',
-                    name: 'id'
-                },
-                {
-                    data: 'title',
-                    name: 'title'
-                },
-                {
-                    data: 'content',
-                    name: 'content'
-                },
-                {
-                    data: 'created_at',
-                    name: 'created_at'
-                }
-            ]
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('#storyTable').DataTable();
         });
-    });
 
-</script>
-@endpush --}}
+    </script>
+@endpush

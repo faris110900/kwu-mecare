@@ -5481,16 +5481,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v9.13.0",
+            "version": "v9.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "1f0945d9ea0bde659a8fc36c4e3ed7a824c70ca0"
+                "reference": "568e670df088123e9e535154fd6c66d38b081ef9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/1f0945d9ea0bde659a8fc36c4e3ed7a824c70ca0",
-                "reference": "1f0945d9ea0bde659a8fc36c4e3ed7a824c70ca0",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/568e670df088123e9e535154fd6c66d38b081ef9",
+                "reference": "568e670df088123e9e535154fd6c66d38b081ef9",
                 "shasum": ""
             },
             "require": {
@@ -5558,7 +5558,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2020-10-31T09:24:57+00:00"
+            "time": "2020-11-03T09:58:06+00:00"
         }
     ],
     "packages-dev": [
@@ -5922,6 +5922,7 @@
                 "faker",
                 "fixtures"
             ],
+            "abandoned": true,
             "time": "2019-12-12T13:22:17+00:00"
         },
         {
