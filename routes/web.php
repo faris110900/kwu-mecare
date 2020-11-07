@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Route::get('/', function () {
+//     return view('frontend.welcome2');
+// });
+Route::get('/', [App\Http\Controllers\Frontend\HomeController::class, 'index'])->name('home');
+
 Auth::routes();
-Route::redirect('/admin', '/admin/dashboard');
+// Route::redirect('/admin', '/admin/dashboard');
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');

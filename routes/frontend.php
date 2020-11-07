@@ -14,9 +14,9 @@ Route::name('frontend.')->group(function () {
         //     return view('dashboard');
         // })->name('dashboard');
 
-        Route::get('/', function () {
-            return view('welcome');
-        })->name('frontend.welcome');
+        // Route::get('/', function () {
+        //     return view('welcome');
+        // })->name('frontend.welcome');
 
         Route::get('welcome', 'HomeController@index')->name('welcome');
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
@@ -33,7 +33,7 @@ Route::name('frontend.')->group(function () {
         'namespace' => 'Frontend',
         'middleware' => ['auth', 'role:admin']
     ], function () {
-        Route::get('/', function () {
+        Route::get('/admin', function () {
             return view('admin.dashboard');
         })->name('admin.dashboard');
         
