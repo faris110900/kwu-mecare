@@ -68,7 +68,7 @@
                 </ul>
             </nav><!-- .nav-menu -->
 
-            <a href="{{ route('login') }}" class="get-started-btn scrollto ml-2">Coba bercerita</a>
+            <a href="{{ route('login') }}" class="get-started-btn scrollto ml-2 text-white">Coba bercerita</a>
 
         </div>
     </header><!-- End Header -->
@@ -80,7 +80,7 @@
             <div class="row">
                 <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
                     <h1>Platform tempatmu bercerita</h1>
-                    <p class="mt-3 mb-3">Dapatkan solusi lengkap dan komprehensif untuk merawat dan menjaga kesehatan
+                    <p class="mt-3 mb-3 text-muted">Dapatkan solusi lengkap dan komprehensif untuk merawat dan menjaga kesehatan
                         mentalmu. Hidup sehat mental dan bahagia tinggal selangkah lagi.</p>
                     <div class="d-flex">
                         <a href="#about" class="btn-get-started scrollto">Selengkapnya</a>
@@ -143,7 +143,7 @@
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center">
                         <h3>Berbagi Cerita</h3>
-                        <h6>
+                        <h6 class="text-muted">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore
                             magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum corrupti
@@ -167,14 +167,14 @@
                 <div class="row">
                     <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center">
                         <h3>Konsultasi</h3>
-                        <h6>
+                        <h6 class="text-muted">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore
                             magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eaque quos
                             praesentium, perferendis illo nulla id saepe voluptas. Dignissimos, nobis? Odit, eaque.
                             Exercitationem, perferendis esse eveniet excepturi itaque sunt ratione.
                         </h6><br>
-                        <h6>
+                        <h6 class="text-muted">
                             Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
                             reprehenderit in voluptate
                             velit esse cillum dolore eu fugiat nulla pariatur.

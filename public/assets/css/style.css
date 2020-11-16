@@ -215,21 +215,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
   padding: 10px 30px 10px 30px;
   border-radius: 4px;
-  transition: 0.5s;
-  color: #fff;
-  background: #16df7e;
-  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
-}
-
-.get-started-btn:hover {
   background: #206bfb;
-  color: #fff;
-  border-color: #206bfb;
-  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
 }
 
 @media (max-width: 768px) {
@@ -634,15 +623,10 @@ section {
   padding: 10px 30px 10px 30px;
   border-radius: 4px;
   transition: 0.5s;
-  color: #16df7e;
-  border: 2px solid #16df7e;
+  color: #206bfb;
+  border: 2px solid #206bfb;
 }
 
-.about .btn-coba-border:hover {
-  background: #16df7e;
-  color: #fff;
-  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
-}
 
 /*--------------------------------------------------------------
 # Konsultasi
@@ -700,14 +684,8 @@ section {
   padding: 10px 30px 10px 30px;
   border-radius: 4px;
   transition: 0.5s;
-  color: #16df7e;
-  border: 2px solid #16df7e;
-}
-
-.konsultasi .btn-coba-border:hover {
-  background: #16df7e;
-  color: #fff;
-  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+  color: #206bfb;
+  border: 2px solid #206bfb;
 }
 
 /*--------------------------------------------------------------
