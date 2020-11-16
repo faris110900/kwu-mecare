@@ -12,36 +12,40 @@
                             @csrf
                             <div class="form-group">
                                 <label for="inputEmail">Email address</label>
-                                <input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror"
-                                    placeholder="Email address" value="{{ old('email') }}" required autocomplete="email"
-                                    autofocus>
+                                <input type="email" name="email" id="email"
+                                    class="form-control @error('email') is-invalid @enderror" placeholder="Email address"
+                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                 @enderror
                             </div>
 
                             <div class="form-group">
                                 <label for="inputPassword">Password</label>
-                                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="Password "
-                                required autocomplete="current-password">
+                                <input type="password" class="form-control @error('password') is-invalid @enderror"
+                                    name="password" id="password" placeholder="Password " required
+                                    autocomplete="current-password">
 
                                 @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                 @enderror
                             </div>
 
                             <div class="custom-control custom-checkbox mb-3">
                                 <input type="checkbox" class="custom-control-input" name="remember" id="remember"
-                                {{ old('remember') ? 'checked' : '' }}>
-                                <label class="custom-control-label" for="customCheck1">Remember password</label>
+                                    {{ old('remember') ? 'checked' : '' }}>
+                                <label class="custom-control-label" for="customCheck1">Ingat password</label>
                             </div>
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
-                            <a href="{{ route('register') }}" class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">Create Account</a>
+                            <button class="btn btn-lg btn-block text-uppercase" type="submit">Masuk</button>
+
+                            <div class="regis mt-3" align="center">
+                                <span>Belum Punya akun ?<a href="{{ route('register') }}" class="text-primary"> Create Account</a></span>
+                            </div>
 
                         </form>
                     </div>

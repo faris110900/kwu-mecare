@@ -58,8 +58,11 @@
                             </div>
 
 
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign
-                                Up</button>
+                            <button class="btn btn-lg btn-block text-uppercase" type="submit">Daftar</button>
+
+                                <div class="regis mt-3" align="center">
+                                    <span>Sudah punya akun ?<a href="{{ route('login') }}" class="text-primary"> Masuk</a></span>
+                                </div>
 
                         </form>
                     </div>

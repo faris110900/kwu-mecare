@@ -606,6 +606,110 @@ section {
   margin-bottom: 0;
 }
 
+.about .btn-coba {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #16df7e;
+  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+}
+
+.about .btn-coba:hover {
+  background: #206bfb;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}
+
+.about .btn-coba-border {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #16df7e;
+  border: 2px solid #16df7e;
+}
+
+.about .btn-coba-border:hover {
+  background: #16df7e;
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}
+
+/*--------------------------------------------------------------
+# Konsultasi
+--------------------------------------------------------------*/
+.konsultasi .content h3 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #5f687b;
+}
+
+.konsultasi .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.konsultasi .content ul li {
+  padding-bottom: 10px;
+}
+
+.konsultasi .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #16df7e;
+}
+
+.konsultasi .content p:last-child {
+  margin-bottom: 0;
+}
+
+.konsultasi .btn-coba {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #16df7e;
+  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+}
+
+.konsultasi .btn-coba:hover {
+  background: #206bfb;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}
+
+.konsultasi .btn-coba-border {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #16df7e;
+  border: 2px solid #16df7e;
+}
+
+.konsultasi .btn-coba-border:hover {
+  background: #16df7e;
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}
+
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
