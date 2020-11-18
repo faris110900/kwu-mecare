@@ -80,7 +80,7 @@
             <div class="row">
                 <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
                     <h1>Platform tempatmu bercerita</h1>
-                    <p class="mt-3 mb-3 text-muted">Dapatkan solusi lengkap dan komprehensif untuk merawat dan menjaga kesehatan
+                    <p class="mt-3 mb-3 text-muted" style="font-size: 20px;">Dapatkan solusi lengkap dan komprehensif untuk merawat dan menjaga kesehatan
                         mentalmu. Hidup sehat mental dan bahagia tinggal selangkah lagi.</p>
                     <div class="d-flex">
                         <a href="#about" class="btn-get-started scrollto">Selengkapnya</a>
@@ -143,12 +143,10 @@
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center">
                         <h3>Berbagi Cerita</h3>
-                        <h6 class="text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum corrupti
-                            facere adipisci. Modi maiores id laboriosam, non blanditiis inventore ipsam accusamus
-                            facilis! Beatae nobis vitae dicta facere, tenetur cum provident.
+                        <h6 class="mt-3 text-muted" style="font-size: 20px;">
+                            Ceritakan semua permasalahanmu dengan aman dan nyaman lewat blog sendiri tanpa perlu mengetahui siapa kamu. <br> <br>
+                            
+                            Kamu hanya perlu bercerita semua permasalahanmu, curahkan semua apa yang kamu pikirkan, hindari stress karena banyak pikiran yang ada dikepalamu.
                         </h6>
 
                         <div class="btn-group mt-3">
@@ -168,11 +166,7 @@
                     <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center">
                         <h3>Konsultasi</h3>
                         <h6 class="text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eaque quos
-                            praesentium, perferendis illo nulla id saepe voluptas. Dignissimos, nobis? Odit, eaque.
-                            Exercitationem, perferendis esse eveniet excepturi itaque sunt ratione.
+                            
                         </h6><br>
                         <h6 class="text-muted">
                             Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in

@@ -2,6 +2,14 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/* color{
+  color: #206bfb; /*second*/
+  color: #14c871; /*primary*/
+  color: #444444; /*hitam*/
+  color: #16df7e; /*primary-second*/
+} */
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -218,8 +226,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 30px 10px 30px;
   border-radius: 4px;
   background: #206bfb;
-  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+ 
 }
+
 
 @media (max-width: 768px) {
   .get-started-btn {
