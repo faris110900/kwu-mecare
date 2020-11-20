@@ -7,7 +7,7 @@
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
                     <div class="card-body">
-                        <h2 class="card-title text-center">Sign In</h2>
+                        <h2 class="card-title text-center">Masuk</h2>
                         <form method="POST" action="{{ route('login') }}" class="form-signin">
                             @csrf
                             <div class="form-group">
@@ -44,7 +44,7 @@
                             <button class="btn btn-lg btn-block text-uppercase" type="submit">Masuk</button>
 
                             <div class="regis mt-3" align="center">
-                                <span>Belum Punya akun ?<a href="{{ route('register') }}" class="text-primary"> Create Account</a></span>
+                                <span>Belum Punya akun ?<a href="{{ route('register') }}" class="text-primary"> Buat Akun</a></span>
                             </div>
 
                         </form>

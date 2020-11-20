@@ -25,7 +25,7 @@
 </head>
 {{--
 
-<body style="background: #16df7e; linear-gradient(to right, #0062E6, #33AEFF);"> --}}
+<body style="background: #25c196; linear-gradient(to right, #0062E6, #33AEFF);"> --}}
 
     <body>
         <div id="app">

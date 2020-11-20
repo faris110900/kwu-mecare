@@ -34,12 +34,12 @@ body {
     font-weight: bold;
     padding: 1rem;
     transition: all 0.2s;
-    background: #16df7e;
+    background: #25c196;
     color: #fff;
   }
   
   .form-signin .btn:hover {
-    background: #206bfb;
+    background: #7986BF;
     box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
   }
 
