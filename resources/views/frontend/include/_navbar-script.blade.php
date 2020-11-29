@@ -1,68 +1,58 @@
-<!-- Navbar -->
-<nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
-    <div class="container-fluid">
-        <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Dashboard</a>
-        <!-- Form -->
-        <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-            <div class="form-group mb-0">
-                <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-search"></i></span>
-                    </div>
-                    <input class="form-control" placeholder="Search" type="text">
-                </div>
-            </div>
-        </form>
-        <!-- User -->
-        <ul class="navbar-nav align-items-center d-none d-md-flex">
-            <li class="nav-item dropdown">
-                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <div class="media align-items-center">
-                        <span class="avatar avatar-sm rounded-circle">
-                            <img src="{{ asset('argon/assets/img/theme/team-4-800x800.jpg') }}">
-                        </span>
-                        <div class="media-body ml-2 d-none d-lg-block">
-                            <span class="mb-0 text-sm  font-weight-bold">{{ Auth::user()->name }}</span>
-                        </div>
-                    </div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                    <div class=" dropdown-header noti-title">
-                        <h6 class="text-overflow m-0">Welcome!</h6>
-                    </div>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-single-02"></i>
-                        <span>My profile</span>
-                    </a>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-settings-gear-65"></i>
-                        <span>Settings</span>
-                    </a>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-calendar-grid-58"></i>
-                        <span>Activity</span>
-                    </a>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-support-16"></i>
-                        <span>Support</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
-                  document.getElementById('logout-form').submit();">
-                        <i class="ni ni-user-run"></i>
-                        <span>Logout</span>
-                        
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+        <h1 class="logo mr-auto"><a href="{{ url('/') }}">MeCare</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="">Ceritamu</a></li>
+                    <li><a href="#services">Blog</a></li>
+                    <li><a href="#portfolio">Konseling</a></li>
+                    <li class="drop-down"><a href="">Moodku</a>
+                        <ul>
+                            {{-- <li class="drop-down"><a href="#">Deep Drop Down</a>
+                                <ul>
+                                    <li><a href="#">Deep Drop Down 1</a></li>
+                                    <li><a href="#">Deep Drop Down 2</a></li>
+                                    <li><a href="#">Deep Drop Down 3</a></li>
+                                    <li><a href="#">Deep Drop Down 4</a></li>
+                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                </ul>
+                            </li> --}}
+                            {{-- <li><a href="#">Drop Down 1</a></li>
+                            --}}
+                            <li><a href="#">Cek Keadaan</a></li>
+                            <li><a href="#">Meditasi</a></li>
+                            <li><a href="#">Mental Pixel</a></li>
+                        </ul>
+                    </li>
+                    @if(Auth::check())
+                    <li class="drop-down font-weight-bold"><a href=""
+                        style="color: #7986BF;">{{ Auth::user()->name }}</a>
+                    <ul>
+                        <li><a href="{{ route('frontend.dashboard') }}">My Story</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li>
+                            <a href="{{ route('logout') }}" class="text-sm text-gray-700 underline" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">Logout</a>
+                        </li>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
-<!-- End Navbar -->
+                    </ul>
+                </li>
+                
+                @else
+                    <a href="{{ route('login') }}" class="get-started-btn scrollto ml-2 text-white">Coba
+                    bercerita</a>
+                    @endif
+                </ul>
+            </nav><!-- .nav-menu -->
 
+        </div>
+    </header><!-- End Header -->
 @stack('navbar-scripts')

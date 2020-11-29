@@ -1590,3 +1590,44 @@ section {
     text-align-last: center;
   }
 }
+
+.my-story img {
+  width: 200px;
+  border-radius: 100%;
+}
+
+.my-story .content {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+@media (max-width: 992px) {
+  .my-story .content {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-story .content {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.story-profile{
+  margin-top: -80px;
+}
+
+.story-profile .content-story {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.story-profile .title-link{
+  color: #3e4450;
+}
+
+.story-profile .title-link:hover {
+  color: #008a63;
+}

@@ -43,7 +43,7 @@
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                     <li class="active"><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="#about">Ceritamu</a></li>
+                    <li><a href="">Ceritamu</a></li>
                     <li><a href="#services">Blog</a></li>
                     <li><a href="#portfolio">Konseling</a></li>
                     <li class="drop-down"><a href="">Moodku</a>
@@ -68,7 +68,7 @@
                     <li class="drop-down font-weight-bold"><a href=""
                         style="color: #7986BF;">{{ Auth::user()->name }}</a>
                     <ul>
-                        <li><a href="{{ route('frontend.dashboard') }}">Dashboard</a></li>
+                        <li><a href="{{ route('frontend.story.index') }}">My Story</a></li>
                         <li><a href="#">Profile</a></li>
                         <li>
                             <a href="{{ route('logout') }}" class="text-sm text-gray-700 underline" onclick="event.preventDefault();
@@ -334,7 +334,7 @@
 
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch"  data-aos="fade-up" data-aos-duration="3000">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch"  data-aos="fade-up" data-aos-duration="2000">
                         <div class="member">
                             <img src="assets/img/team/team-3.jpg" alt="">
                             <h4>William Anderson</h4>
@@ -352,7 +352,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch"  data-aos="fade-up" data-aos-duration="3500">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch"  data-aos="fade-up" data-aos-duration="2500">
                         <div class="member">
                             <img src="assets/img/team/team-3.jpg" alt="">
                             <h4>William Anderson</h4>

@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Story;
 use Illuminate\Support\Facades\Route;
 
 Route::name('frontend.')->group(function () {

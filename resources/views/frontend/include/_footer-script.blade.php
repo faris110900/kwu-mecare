@@ -1,22 +1,18 @@
-<script src="{{asset('/argon/assets/js/plugins/jquery/dist/jquery.min.js')}}"></script>
-<script src="{{asset('./argon/assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
-<!--   Optional JS   -->
-<script src="{{asset('./argon/assets/js/plugins/chart.js/dist/Chart.min.js')}}"></script>
-<script src="{{asset('./argon/assets/js/plugins/chart.js/dist/Chart.extension.js')}}"></script>
-<!--   Argon JS   -->
-<script src="{{asset('./argon/assets/js/argon-dashboard.min.js?v=1.1.0')}}"></script>
-<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-<!--   ckeditor   -->
-<script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
-<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-
-
-<script>
-  window.TrackJS &&
-    TrackJS.install({
-      token: "ee6fab19c5a04ac1a32a645abde4613a",
-      application: "argon-dashboard-free"
-    });
-</script>
+ <!-- Vendor JS Files -->
+ <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+ <script src="{{ asset('assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/counterup/counterup.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/venobox/venobox.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <!-- Template Main JS File -->
+ <script src="{{ asset('assets/js/main.js') }}"></script>
+ <script>
+     AOS.init();
+   </script>
 @include('sweetalert::alert')
 @stack('footer-scripts')
