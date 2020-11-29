@@ -21,7 +21,8 @@
 
         </div>
 
-
+        {{-- @include('frontend.include._footer') --}}
+        
     @include('frontend.include._footer-script')
     @stack('scripts')
 </body>

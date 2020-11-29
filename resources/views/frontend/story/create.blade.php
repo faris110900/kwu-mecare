@@ -2,40 +2,38 @@
 
 @section('content')
 
-    <div class="card mt-3 mb-3 shadow-sm">
-        <div class="card-body">
-            <h2>Create your story</h2>
+<section id="create-story" class="create-story">
+    <div class="mt-3 mb-3">
+        <h2 class="mb-3"><b>Buat Ceritamu</b></h2>
         <form action="{{ route('frontend.story.store') }}" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                <div class="form-group">
-                    <label for="">Title</label>
-                    <input type="text" name="title" class="form-control" placeholder="*my first story ...">
-                </div>
+            {{ csrf_field() }}
+            <div class="form-group mt-3">
+                <label for="">Judul Cerita</label>
+                <input type="text" name="title" class="form-control" placeholder="Judul Cerita ...">
+            </div>
 
-                <div class="form-group">
-                    <label for="">Tell me your story</label>
-                    <textarea name="content"></textarea>
-                </div>
+            <div class="form-group">
+                <label for="">Ceritakan semua disini</label>
+                <textarea name="content"></textarea>
+            </div>
 
-                <div class="form-group">
-                    <label for="exampleFormControlFile1">Story thumbnail</label>
-                    <input type="file" class="form-control-file" name="image">
-                </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Thumbnail Cerita</label>
+                <input type="file" class="form-control-file" name="image">
+            </div>
 
-                <div align="right">
-                    <button class="btn btn-primary" value="save" type="submit">Upload</button>
-                </div>
-            </form>
-        </div>
+            <div align="right">
+                <button class="btn btn-create" value="save" type="submit">Upload</button>
+            </div>
+        </form>
     </div>
+</section>
 
 
 @endsection
 
-
 @push('footer-scripts')
     <script>
         CKEDITOR.replace('content');
-
     </script>
 @endpush

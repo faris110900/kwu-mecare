@@ -59,7 +59,7 @@
                             </li> --}}
                             {{-- <li><a href="#">Drop Down 1</a></li>
                             --}}
-                            <li><a href="#">Cek Keadaan</a></li>
+                        <li><a href="{{ url('cek-keadaan') }}">Cek Keadaan</a></li>
                             <li><a href="#">Meditasi</a></li>
                             <li><a href="#">Mental Pixel</a></li>
                         </ul>

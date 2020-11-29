@@ -13,6 +13,8 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dolores nulla repellendus cum accusamus rem
                 laboriosam culpa quibusdam ex quisquam voluptate possimus porro quos architecto, excepturi optio omnis.
                 Mollitia, possimus?</p>
+
+            <a href="{{ route('frontend.story.create') }}" class="btn btn-create mb-3">Buat Ceritaku</a>
         </div>
 
         <div class="container mt-3">
@@ -33,7 +35,7 @@
                     </a>
                     <p class="mt-3 pt-3" align="left">
                         @php
-                        echo Str::limit($story->content, 20);
+                        echo Str::limit($story->content, 100);
                         @endphp
                     </p>
                     <div class="share">
@@ -44,7 +46,7 @@
                             </div>
                             <div class="col-lg-6" align="right">
                                 <div class="dropdown">
-                                    <a class="btn dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    <a class="btn " role="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
                                         <i class="fas fa-ellipsis-v" style="color: #008a63;"></i>
                                     </a>
@@ -134,7 +136,7 @@
     </div> --}}
 
 @endsection
-
+{{-- 
 @push('scripts')
     <script>
         $(document).ready(function() {
@@ -142,4 +144,4 @@
         });
 
     </script>
-@endpush
+@endpush --}}

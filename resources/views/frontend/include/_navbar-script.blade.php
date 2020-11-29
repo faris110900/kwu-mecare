@@ -8,24 +8,13 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="{{ url('/') }}">Home</a></li>
+                    <li class="{{ Request::segment(1) === 'home' ? 'active' : null }}"><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="">Ceritamu</a></li>
                     <li><a href="#services">Blog</a></li>
                     <li><a href="#portfolio">Konseling</a></li>
                     <li class="drop-down"><a href="">Moodku</a>
                         <ul>
-                            {{-- <li class="drop-down"><a href="#">Deep Drop Down</a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li> --}}
-                            {{-- <li><a href="#">Drop Down 1</a></li>
-                            --}}
-                            <li><a href="#">Cek Keadaan</a></li>
+                            <li class="{{ Request::segment(1) === 'cek-keadaan' ? 'active' : null }}"><a href="{{ url('cek-keadaan') }}">Cek Keadaan</a></li>
                             <li><a href="#">Meditasi</a></li>
                             <li><a href="#">Mental Pixel</a></li>
                         </ul>
@@ -34,7 +23,7 @@
                     <li class="drop-down font-weight-bold"><a href=""
                         style="color: #7986BF;">{{ Auth::user()->name }}</a>
                     <ul>
-                        <li><a href="{{ route('frontend.dashboard') }}">My Story</a></li>
+                        <li class="{{ Request::segment(1) === 'story' ? 'active' : null }}"><a href="{{ route('frontend.story.index') }}">My Story</a></li>
                         <li><a href="#">Profile</a></li>
                         <li>
                             <a href="{{ route('logout') }}" class="text-sm text-gray-700 underline" onclick="event.preventDefault();

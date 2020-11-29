@@ -1601,6 +1601,25 @@ section {
   padding-right: 300px;
 }
 
+.my-story .btn-create{
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #25c196;
+  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+}
+
+.my-story .btn-create:hover {
+  background: #7986BF;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}
+
 @media (max-width: 992px) {
   .my-story .content {
     padding-right: 100px;
@@ -1630,4 +1649,82 @@ section {
 
 .story-profile .title-link:hover {
   color: #008a63;
+}
+
+.create-story {
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.create-story .btn-create{
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #25c196;
+  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+}
+
+.create-story .btn-create:hover {
+  background: #7986BF;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}
+
+@media (max-width: 992px) {
+  .create-story {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .create-story {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.edit-story {
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.edit-story .btn-edit{
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #25c196;
+  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+}
+
+.edit-story .btn-edit:hover {
+  background: #7986BF;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}
+
+@media (max-width: 992px) {
+  .edit-story {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .edit-story {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }

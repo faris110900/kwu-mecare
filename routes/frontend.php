@@ -19,10 +19,14 @@ Route::name('frontend.')->group(function () {
 
         Route::get('welcome', 'HomeController@index')->name('welcome');
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+        
         //Story Route
         Route::get('story', 'StoryController@index')->name('story');
         Route::get('/story/{story}/delete', 'StoryController@destroy')->name('story.delete');
         Route::resource('story', 'StoryController');
+
+        //Cek Keadaan Route
+        Route::get('cek-keadaan', 'CekController@index');
     });
 });
 
