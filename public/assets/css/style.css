@@ -1739,6 +1739,48 @@ section {
   }
 }
 
+.show-story {
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+@media (max-width: 992px) {
+  .show-story {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .show-story {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.show-story h1 {
+  font-family: "Raleway", sans-serif;
+  margin-top: 40px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+.show-story h2 {
+  font-family: "Raleway", sans-serif;
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+.show-story p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
 
 
 #hero-ceritamu h1 {
@@ -1753,4 +1795,34 @@ section {
   color: #858ea1;
   margin: 10px 0  30px 0;
   font-size: 24px;
+}
+
+@media (max-width: 600px) {
+  #hero-ceritamu h1 {
+    font-size: 36px;
+  }
+
+  #hero-ceritamu h2 {
+    font-size: 15px;
+  }
+}
+
+.ceritamu img {
+  width: 700px;
+  height: 350px;
+}
+
+
+@media (max-width: 992px) {
+  .ceritamu img {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ceritamu img {
+    width: 300px;
+    height: 200px;
+  }
 }

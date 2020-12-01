@@ -57,7 +57,7 @@ class StoryController extends Controller
         Alert::success('Success', 'Your story now flying');
 
         Story::create([
-            // 'user_id' => Auth::id(),
+            'user_id' => Auth::id(),
             'title' => request('title'),
             'slug' => Str::slug(request('title')),
             'image' => request('image')->store('stories'),
@@ -107,6 +107,7 @@ class StoryController extends Controller
         Alert::success('success', 'Your story updated');
 
         $story->update([
+            'user_id' => Auth::id(),
             'title' => request('title'),
             'slug' => Str::slug(request('title')),
             'image' => request('image')->store('stories'),
