@@ -126,6 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   color: #008a63;
+  font-weight: 600;
 }
 
 .nav-menu .drop-down ul {
@@ -163,6 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
   color: #008a63;
+  font-weight: 600;
 }
 
 .nav-menu .drop-down > a:after {
@@ -229,11 +231,19 @@ h1, h2, h3, h4, h5, h6 {
  
 }
 
-
 @media (max-width: 768px) {
   .get-started-btn {
     margin: 0 48px 0 0;
-    padding: 6px 18px;
+    padding: 10px 30px 10px 30px;
+    width: 715px;
+  }
+}
+
+@media (max-width: 600px){
+  .get-started-btn {
+    margin: 0 48px 0 0;
+    padding: 10px 30px 10px 30px;
+    width: 310px;
   }
 }
 
@@ -1727,4 +1737,20 @@ section {
     padding-right: 30px;
     padding-left: 30px;
   }
+}
+
+
+
+#hero-ceritamu h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+#hero-ceritamu h2 {
+  color: #858ea1;
+  margin: 10px 0  30px 0;
+  font-size: 24px;
 }

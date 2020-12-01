@@ -29,6 +29,13 @@ class StoryController extends Controller
         return view('frontend.story.index', compact('stories'));
     }
 
+    public function home(){
+
+        $stories = Story::all();
+
+        return view('frontend.story.home', compact('stories'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

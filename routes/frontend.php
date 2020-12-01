@@ -4,6 +4,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::name('frontend.')->group(function () {
     Route::group([
+        'namespace' => 'Frontend',
+    ], function () {
+
+        Route::get('story-home','StoryController@home')->name('story-home');
+    });
+});
+
+Route::name('frontend.')->group(function () {
+    Route::group([
         // 'middleware'    => ['auth', 'checkRole:Admin'],
         'namespace'  => 'Frontend',
         'middleware' => ['auth', 'role:user']

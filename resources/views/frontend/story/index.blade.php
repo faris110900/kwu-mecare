@@ -33,10 +33,8 @@
                                 {{ $story->title }}
                             </b></h2>
                     </a>
-                    <p class="mt-3 pt-3" align="left">
-                        @php
-                        echo Str::limit($story->content, 100);
-                        @endphp
+                    <p class="mt-3 pt-3 text-left" align="left">
+                        {!! Str::limit($story->content, 400) !!}
                     </p>
                     <div class="share">
                         <div class="row">

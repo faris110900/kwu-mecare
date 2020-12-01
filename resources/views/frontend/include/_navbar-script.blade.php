@@ -9,12 +9,11 @@
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                     <li class="{{ Request::segment(1) === 'home' ? 'active' : null }}"><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="">Ceritamu</a></li>
-                    <li><a href="#services">Blog</a></li>
+                    <li class="{{ Request::segment(1) === 'story-home' ? 'active' : null }}"><a href="{{ url('story-home') }}">Ceritamu</a></li>
                     <li><a href="#portfolio">Konseling</a></li>
                     <li class="drop-down"><a href="">Moodku</a>
                         <ul>
-                            <li class="{{ Request::segment(1) === 'cek-keadaan' ? 'active' : null }}"><a href="{{ url('cek-keadaan') }}">Cek Keadaan</a></li>
+                            
                             <li><a href="#">Meditasi</a></li>
                             <li><a href="#">Mental Pixel</a></li>
                         </ul>

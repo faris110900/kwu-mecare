@@ -43,8 +43,7 @@
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                     <li class="active"><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="">Ceritamu</a></li>
-                    <li><a href="#services">Blog</a></li>
+                    <li><a href="{{ url('story-home') }}">Ceritamu</a></li>
                     <li><a href="#portfolio">Konseling</a></li>
                     <li class="drop-down"><a href="">Moodku</a>
                         <ul>
@@ -59,7 +58,6 @@
                             </li> --}}
                             {{-- <li><a href="#">Drop Down 1</a></li>
                             --}}
-                        <li><a href="{{ url('cek-keadaan') }}">Cek Keadaan</a></li>
                             <li><a href="#">Meditasi</a></li>
                             <li><a href="#">Mental Pixel</a></li>
                         </ul>
