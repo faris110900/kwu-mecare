@@ -15,7 +15,7 @@ Route::name('frontend.')->group(function () {
     Route::group([
         // 'middleware'    => ['auth', 'checkRole:Admin'],
         'namespace'  => 'Frontend',
-        'middleware' => ['auth', 'role:user']
+        'middleware' => ['auth', 'CheckRole:user']
         
     ], function () {
         // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -43,7 +43,7 @@ Route::name('frontend.')->group(function () {
 Route::name('frontend.')->group(function () {
     Route::group([
         'namespace' => 'Frontend',
-        'middleware' => ['auth', 'role:admin']
+        'middleware' => ['auth', 'CheckRole:admin']
     ], function () {
         Route::get('/admin', function () {
             return view('admin.dashboard');
