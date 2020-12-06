@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\Story;
-use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -27,7 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $stories = Auth::user()->id;
         $stories = Story::all();
         // dd($stories);
 

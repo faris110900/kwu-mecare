@@ -1,5 +1,7 @@
 @extends('frontend.master')
 
+@section('title', 'Ceritaku')
+
 @section('content')
 
     <section id="my-story" class="my-story">

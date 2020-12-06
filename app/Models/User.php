@@ -68,6 +68,11 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    public function Storys(){
+
+        return $this->hasMany(Story::class);
+    }
+
     // public function roles()
     // {
     //     return $this->belongsToMany(Role::class);

@@ -18,14 +18,12 @@ class StoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function json(){
-        return Datatables::of(Story::all())->make(true);
-    }
 
     public function index()
     {
         $stories = Auth::user()->id;
-        $stories = Story::orderBy('id', 'asc')->get();
+        // $stories = Story::orderBy('user_id')->get();
+        $stories = auth()->user()->Storys;
 
         return view('frontend.story.index', compact('stories'));
     }
@@ -65,7 +63,7 @@ class StoryController extends Controller
             'content' => request('content'),
         ]);
 
-        return redirect()->route('frontend.story.index', ['id' => Auth::user()->id ]);
+        return redirect()->route('frontend.story.index');
     }
 
     /**

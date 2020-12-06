@@ -30,7 +30,7 @@ Route::name('frontend.')->group(function () {
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
         
         //Story Route
-        Route::get('story/{stories}/', 'StoryController@index')->name('story');
+        Route::get('story/{stories}/    ', 'StoryController@index')->name('story');
         Route::get('/story/{story}/delete', 'StoryController@destroy')->name('story.delete');
         Route::resource('story', 'StoryController');
 

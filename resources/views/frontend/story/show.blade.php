@@ -1,5 +1,7 @@
 @extends('frontend.master')
 
+@section('title', 'Cerita')
+
 @section('content')
 
     <section id="show-story" class="show-story mt-3">

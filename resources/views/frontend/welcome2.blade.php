@@ -66,7 +66,7 @@
                     <li class="drop-down font-weight-bold"><a href=""
                         style="color: #7986BF;">{{ Auth::user()->name }}</a>
                     <ul>
-                        <li><a href="{{ route('frontend.story.index', Auth::user()->id) }}">My Story</a></li>
+                        <li><a href="{{ route('frontend.story.index') }}">My Story</a></li>
                         <li><a href="#">Profile</a></li>
                         <li>
                             <a href="{{ route('logout') }}" class="text-sm text-gray-700 underline" onclick="event.preventDefault();
@@ -317,10 +317,7 @@
                                 toro des clara"
                             </p>
                             <div class="social">
-                                <a href=""><i class="icofont-twitter"></i></a>
-                                <a href=""><i class="icofont-facebook"></i></a>
-                                <a href=""><i class="icofont-instagram"></i></a>
-                                <a href=""><i class="icofont-linkedin"></i></a>
+                                <a href="https://www.instagram.com/fananisu/"><i class="icofont-instagram"></i></a>
                             </div>
                         </div>
                     </div>
