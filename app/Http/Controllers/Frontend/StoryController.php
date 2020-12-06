@@ -24,6 +24,7 @@ class StoryController extends Controller
 
     public function index()
     {
+        $stories = Auth::user()->id;
         $stories = Story::orderBy('id', 'asc')->get();
 
         return view('frontend.story.index', compact('stories'));
@@ -64,7 +65,7 @@ class StoryController extends Controller
             'content' => request('content'),
         ]);
 
-        return redirect()->route('frontend.story.index');
+        return redirect()->route('frontend.story.index', ['id' => Auth::user()->id ]);
     }
 
     /**

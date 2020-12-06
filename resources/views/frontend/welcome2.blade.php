@@ -66,7 +66,7 @@
                     <li class="drop-down font-weight-bold"><a href=""
                         style="color: #7986BF;">{{ Auth::user()->name }}</a>
                     <ul>
-                        <li><a href="{{ route('frontend.story.index') }}">My Story</a></li>
+                        <li><a href="{{ route('frontend.story.index', Auth::user()->id) }}">My Story</a></li>
                         <li><a href="#">Profile</a></li>
                         <li>
                             <a href="{{ route('logout') }}" class="text-sm text-gray-700 underline" onclick="event.preventDefault();
@@ -278,48 +278,43 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch"  data-aos="fade-up">
                         <div class="member">
-                            <img src="assets/img/team/team-1.jpg" alt="">
-                            <h4>Walter White</h4>
-                            <span>Chief Executive Officer</span>
+                            <img src="{{ asset('assets/img/team/aprel.jpg') }}" alt="">
+                            <h4>Apriliani Nur Afifah</h4>
+                            <span>CEO</span>
                             <p>
-                                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
-                                quaerat qui aut aut aut
+                               "Kami tahu bahwa kami tidak tahu. Kami kami yakin bahwa kami mampu untuk mencari tahu"
                             </p>
                             <div class="social">
-                                <a href=""><i class="icofont-twitter"></i></a>
-                                <a href=""><i class="icofont-facebook"></i></a>
-                                <a href=""><i class="icofont-instagram"></i></a>
-                                <a href=""><i class="icofont-linkedin"></i></a>
+                                <a href="https://twitter.com/aprilianix"><i class="icofont-twitter"></i></a>
+                                <a href="https://www.instagram.com/aprilia.ni/"><i class="icofont-instagram"></i></a>
+                                <a href=""><i class="icofont-email"></i></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-duration="1000">
                         <div class="member">
-                            <img src="assets/img/team/team-2.jpg" alt="">
-                            <h4>Sarah Jhinson</h4>
-                            <span>Product Manager</span>
+                            <img src="{{ asset('assets/img/team/adel.jpg') }}" alt="">
+                            <h4>Adelia Nuroktaviany Wisan Putri</h4>
+                            <span>UI/UX</span>
                             <p>
-                                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum
-                                rerum temporibus
+                                "Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum
+                                rerum temporibus"
                             </p>
                             <div class="social">
-                                <a href=""><i class="icofont-twitter"></i></a>
-                                <a href=""><i class="icofont-facebook"></i></a>
-                                <a href=""><i class="icofont-instagram"></i></a>
-                                <a href=""><i class="icofont-linkedin"></i></a>
+                                <a href="https://www.instagram.com/adelianwp/"><i class="icofont-instagram"></i></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch"  data-aos="fade-up" data-aos-duration="2000">
                         <div class="member">
-                            <img src="assets/img/team/team-3.jpg" alt="">
-                            <h4>William Anderson</h4>
-                            <span>CTO</span>
+                            <img src="{{ asset('assets/img/team/fanani.jpg') }}" alt="">
+                            <h4>Achmad Fanani Aminulloh</h4>
+                            <span>UI/UX</span>
                             <p>
-                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum
-                                toro des clara
+                               "Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum
+                                toro des clara"
                             </p>
                             <div class="social">
                                 <a href=""><i class="icofont-twitter"></i></a>
@@ -334,36 +329,34 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch"  data-aos="fade-up" data-aos-duration="2000">
                         <div class="member">
-                            <img src="assets/img/team/team-3.jpg" alt="">
-                            <h4>William Anderson</h4>
-                            <span>CTO</span>
+                            <img src="{{ asset('assets/img/team/fadil.jpg') }}" alt="">
+                            <h4>M. Fadil Muhtarom Laoegi</h4>
+                            <span>Frontend Developer</span>
                             <p>
-                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum
-                                toro des clara
+                                "Omah larang"
                             </p>
                             <div class="social">
-                                <a href=""><i class="icofont-twitter"></i></a>
-                                <a href=""><i class="icofont-facebook"></i></a>
-                                <a href=""><i class="icofont-instagram"></i></a>
-                                <a href=""><i class="icofont-linkedin"></i></a>
+                                <a href="https://twitter.com/fdlml_"><i class="icofont-twitter"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100038056546205"><i class="icofont-facebook"></i></a>
+                                <a href="https://www.instagram.com/fdlml_/"><i class="icofont-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/m-fadil-muhtarom-l-4778831a3/"><i class="icofont-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch"  data-aos="fade-up" data-aos-duration="2500">
                         <div class="member">
-                            <img src="assets/img/team/team-3.jpg" alt="">
-                            <h4>William Anderson</h4>
-                            <span>CTO</span>
+                            <img src="{{ asset('assets/img/team/faris.jpg') }}" alt="">
+                            <h4>Faris Rizqilail</h4>
+                            <span>Fullstack Developer</span>
                             <p>
-                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum
-                                toro des clara
+                                "Jangan Berusaha"
                             </p>
                             <div class="social">
-                                <a href=""><i class="icofont-twitter"></i></a>
-                                <a href=""><i class="icofont-facebook"></i></a>
-                                <a href=""><i class="icofont-instagram"></i></a>
-                                <a href=""><i class="icofont-linkedin"></i></a>
+                                <a href="https://twitter.com/farisQLail"><i class="icofont-twitter"></i></a>
+                                <a href="https://www.facebook.com/faris.r.lail/"><i class="icofont-facebook"></i></a>
+                                <a href="https://www.instagram.com/farisqlail/"><i class="icofont-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/faris-rizqilail-630329194/"><i class="icofont-linkedin"></i></a>
                             </div>
                         </div>
                     </div>

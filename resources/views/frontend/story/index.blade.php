@@ -9,10 +9,8 @@
         </div>
 
         <div class="container mt-3 content" align="center">
-            <h3 class="mt-3">Faris Rizqilail</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dolores nulla repellendus cum accusamus rem
-                laboriosam culpa quibusdam ex quisquam voluptate possimus porro quos architecto, excepturi optio omnis.
-                Mollitia, possimus?</p>
+            <h3 class="mt-3">{{ Auth::user()->name }}</h3>
+            <p><i>"Jangan Berusaha"</i></p>
 
             <a href="{{ route('frontend.story.create') }}" class="btn btn-create mb-3">Buat Ceritaku</a>
         </div>
@@ -25,15 +23,17 @@
 
     @foreach ($stories as $story)
         <section id="story-profile" class="story-profile">
-            <div class="container" align="center">
-                <img src="{{ asset('storage/' . $story->image) }}" width="700px" class="img-fluid" alt="" srcset="">
+            <div class="container">
+                <div class="img" align="center">
+                    <img src="{{ asset('storage/' . $story->image) }}" width="700px" class="img-fluid" alt="" srcset="">
+                </div>
                 <div class="content-story">
                     <a href="{{ route('frontend.story.show', $story) }}" class="title-link">
                         <h2 class="mt-3 pt-3" align="left"><b>
                                 {{ $story->title }}
                             </b></h2>
                     </a>
-                    <p class="mt-3 pt-3 text-left" align="left">
+                    <p class=" text-left" align="left">
                         {!! Str::limit($story->content, 400) !!}
                     </p>
                     <div class="share">
@@ -134,12 +134,12 @@
     </div> --}}
 
 @endsection
-{{-- 
+{{--
 @push('scripts')
-    <script>
-        $(document).ready(function() {
-            $('#storyTable').DataTable();
-        });
+<script>
+    $(document).ready(function() {
+        $('#storyTable').DataTable();
+    });
 
-    </script>
+</script>
 @endpush --}}
