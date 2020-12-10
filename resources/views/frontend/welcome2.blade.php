@@ -45,6 +45,7 @@
                     <li class="active"><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ url('story-home') }}">Ceritamu</a></li>
                     <li><a href="#portfolio">Konseling</a></li>
+                    <li><a href="{{ url('langganan') }}">Langganan</a></li>
                     <li class="drop-down"><a href="">Moodku</a>
                         <ul>
                             {{-- <li class="drop-down"><a href="#">Deep Drop Down</a>

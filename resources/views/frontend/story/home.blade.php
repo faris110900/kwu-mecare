@@ -34,7 +34,7 @@
                             class="img-fluid" alt="" srcset="">
                         </div>
                         <div class="content-story">
-                            <a href="{{ route('frontend.story.show', $story) }}" class="title-link">
+                            <a href="{{ route('frontend.story-read', $story) }}" class="title-link">
                                 <h2 class="mt-3 pt-3" align="left"><b>
                                         {{ $story->title }}
                                     </b></h2>
@@ -50,7 +50,7 @@
                                             class="text-muted ml-2"><i>{{ $story->created_at->diffForHumans() }}</i></span>
                                     </div>
                                     <div class="col-lg-6" align="right">
-                                        <a href="https://twitter.com/share?url={{ $story->title }}&text={!! $story->content !!}">
+                                        <a href="https://twitter.com/share?url={{ $story->title }}&text={!! $story->content !!}" target="blank">
                                             <i class="fab fa-telegram-plane"></i>
                                         </a>
                                         {{-- <div class="dropdown">

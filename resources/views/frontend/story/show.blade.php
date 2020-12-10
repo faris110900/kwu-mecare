@@ -1,6 +1,6 @@
 @extends('frontend.master')
 
-@section('title', 'Cerita')
+@section('title', $story->title)
 
 @section('content')
 
@@ -19,7 +19,7 @@
                         <small class="text-muted">{{ $story->created_at->diffForHumans() }}</small>
                     </div>
                     <div class="col-lg-6" align="right">
-                        <span class="text-muted"><strong>Share :</strong> &nbsp; <a href="https://twitter.com/share?url={{ $story->title }}&text={!! $story->content !!}" class="ml-3">
+                        <span class="text-muted"><strong>Share :</strong> &nbsp; <a href="https://twitter.com/share?url={{ $story->title }}&text={!! $story->content !!}" target="blank" class="ml-3">
                             <i class="fab fa-telegram-plane fa-2x"></i>
                         </a></span>
                     </div>
@@ -36,3 +36,4 @@
     </section>
 
 @endsection
+

@@ -1826,3 +1826,60 @@ section {
     height: 200px;
   }
 }
+
+.react .fa-smile-wink:hover {
+  color : #00c9a7;
+  transition: 0.5s;
+
+}
+
+.react .fa-frown-open:hover{
+  color: #825558;
+  transition: 0.5s;
+  
+}
+
+.react .fa-sad-tear:hover {
+  color: #e33737;
+  transition: 0.5s;
+
+}
+
+#hero-langganan h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+#hero-langganan h2 {
+  color: #858ea1;
+  margin: 10px 0  30px 0;
+  font-size: 24px;
+}
+
+@media (max-width: 600px) {
+  #hero-langganan h1 {
+    font-size: 36px;
+  }
+
+  #hero-langganan h2 {
+    font-size: 15px;
+  }
+}
+
+.langganan-title h2 {
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+@media (max-width: 600px) {
+
+  .langganan-title h2 {
+    font-size: 36px;
+  }
+}
+
+

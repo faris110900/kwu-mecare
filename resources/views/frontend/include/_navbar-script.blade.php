@@ -11,6 +11,7 @@
                     <li class="{{ Request::segment(1) === 'home' ? 'active' : null }}"><a href="{{ url('/') }}">Home</a></li>
                     <li class="{{ Request::segment(1) === 'story-home' ? 'active' : null }}"><a href="{{ url('story-home') }}">Ceritamu</a></li>
                     <li><a href="#portfolio">Konseling</a></li>
+                    <li><a href="#portfolio">Langganan</a></li>
                     <li class="drop-down"><a href="">Moodku</a>
                         <ul>
                             
