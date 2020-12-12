@@ -7,7 +7,7 @@
 
           <div class="row  justify-content-center">
               <div class="col-lg-6">
-                  <h3>MeCare</h3>
+                  <h3>Afecto</h3>
                   <p>Dapatkan solusi lengkap dan komprehensif untuk merawat dan menjaga kesehatan mentalmu. Hidup
                       sehat mental dan bahagia tinggal selangkah lagi.</p>
               </div>
@@ -26,10 +26,10 @@
 
   <div class="container footer-bottom clearfix">
       <div class="copyright">
-          &copy; Copyright <strong><span>MeCare</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Afecto</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-          Designed by MeCare
+          Designed by Afecto
       </div>
   </div>
 </footer><!-- End Footer -->

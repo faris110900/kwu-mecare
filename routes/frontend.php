@@ -28,6 +28,8 @@ Route::name('frontend.')->group(function () {
         //     return view('welcome');
         // })->name('frontend.welcome');
 
+        
+        Route::get('welcome', 'HomeController@index')->name('welcome');    
         Route::get('welcome', 'HomeController@index')->name('welcome');
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
         

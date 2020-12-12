@@ -9,7 +9,7 @@
         <a class="navbar-brand pt-0" href="./index.html">
             {{-- <img src="./assets/img/brand/blue.png" class="navbar-brand-img"
                 alt="..."> --}}
-            <h1>Admin MeCare</h1>
+            <h1>Admin Afecto</h1>
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">

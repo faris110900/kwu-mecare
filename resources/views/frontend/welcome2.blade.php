@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>MeCare</title>
+    <title>Afecto</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
@@ -36,7 +36,7 @@
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
 
-        <h1 class="logo mr-auto"><a href="{{ url('/') }}">MeCare</a></h1>
+        <h1 class="logo mr-auto"><a href="{{ url('/') }}">Afecto</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -191,7 +191,7 @@
 
                         </h6><br>
                         <h6 class="mt-3 text-muted" style="font-size: 20px;">
-                            Psikolog MeCare memiliki kompetensi untuk menjawab apapun masalah psikologismu. Kamu bisa
+                            Psikolog Afecto memiliki kompetensi untuk menjawab apapun masalah psikologismu. Kamu bisa
                             bercerita tentang kecemasan, kecanduan hingga masalah percintaan.
                         </h6>
                         <div class="btn-group mt-3">
@@ -219,7 +219,7 @@
 
                         </h6><br>
                         <h6 class="mt-3 text-muted" style="font-size: 20px;">
-                            Tahukah kamu kesehatan mental sangat dipengaruhi oleh kualitas tidurmu? MeCare dilengkapi
+                            Tahukah kamu kesehatan mental sangat dipengaruhi oleh kualitas tidurmu? Afecto dilengkapi
                             konten suara hujan, cerita tidur, sampai musik pengantar tidur.
                         </h6>
                         <div class="btn-group mt-3">
@@ -240,7 +240,7 @@
 
                         </h6><br>
                         <h6 class="mt-3 text-muted" style="font-size: 20px;">
-                            Tahukah kamu kesehatan mental sangat dipengaruhi oleh kualitas tidurmu? MeCare dilengkapi
+                            Tahukah kamu kesehatan mental sangat dipengaruhi oleh kualitas tidurmu? Afecto dilengkapi
                             konten suara hujan, cerita tidur, sampai musik pengantar tidur.
                         </h6>
                         <div class="btn-group mt-3">
@@ -260,7 +260,7 @@
             <div class="container">
 
                 <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
-                    <h3 class="mb-3">Tunggu apalagi? Yuk gunakan MeCare <br> dan saatnya kamu sehat mental</h3>
+                    <h3 class="mb-3">Tunggu apalagi? Yuk gunakan Afecto <br> dan saatnya kamu sehat mental</h3>
                     <a class="cta-btn mt-3" href="#">Coba Sekarang</a>
                 </div>
 
@@ -375,7 +375,7 @@
 
                 <div class="row  justify-content-center">
                     <div class="col-lg-6">
-                        <h3>MeCare</h3>
+                        <h3>Afecto</h3>
                         <p>Dapatkan solusi lengkap dan komprehensif untuk merawat dan menjaga kesehatan mentalmu. Hidup
                             sehat mental dan bahagia tinggal selangkah lagi.</p>
                     </div>
@@ -394,10 +394,10 @@
 
         <div class="container footer-bottom clearfix">
             <div class="copyright">
-                &copy; Copyright <strong><span>MeCare</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>Afecto</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
-                Designed by MeCare
+                Designed by Afecto
             </div>
         </div>
     </footer><!-- End Footer -->
