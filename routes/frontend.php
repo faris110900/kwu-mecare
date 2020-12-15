@@ -2,10 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::name('auth.')->group(function () {
+    Route::group([
+       'namespace' => 'Auth'
+    ], function (){
+        Route::get('verif', 'VerificationController@index')->middleware('verified')->name('verify');
+    });
+});
+
 Route::name('frontend.')->group(function () {
     Route::group([
         'namespace' => 'Frontend',
     ], function () {
+
 
         Route::get('story-home', 'StoryController@home')->name('story-home');
         Route::get('story-read/{story}/', 'StoryController@show')->name('story-read');

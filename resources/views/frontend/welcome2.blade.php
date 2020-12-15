@@ -172,8 +172,7 @@
                         </h6>
 
                         <div class="btn-group mt-3">
-                            <a href="#about" class="btn-coba scrollto">Coba Sekarang</a>
-                            <a href="#about" class="btn-coba-border scrollto ml-3">Lihat Detail</a>
+                            <a href="{{ url('story-home') }}" class="btn-coba scrollto">Coba Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -196,7 +195,6 @@
                         </h6>
                         <div class="btn-group mt-3">
                             <a href="#about" class="btn-coba scrollto">Coba Sekarang</a>
-                            <a href="#about" class="btn-coba-border scrollto ml-3">Lihat Detail</a>
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-duration="3000">
@@ -224,7 +222,6 @@
                         </h6>
                         <div class="btn-group mt-3">
                             <a href="#about" class="btn-coba scrollto">Coba Sekarang</a>
-                            <a href="#about" class="btn-coba-border scrollto ml-3">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -245,7 +242,6 @@
                         </h6>
                         <div class="btn-group mt-3">
                             <a href="#about" class="btn-coba scrollto">Coba Sekarang</a>
-                            <a href="#about" class="btn-coba-border scrollto ml-3">Lihat Detail</a>
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-duration="3000">
@@ -261,7 +257,7 @@
 
                 <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
                     <h3 class="mb-3">Tunggu apalagi? Yuk gunakan Afecto <br> dan saatnya kamu sehat mental</h3>
-                    <a class="cta-btn mt-3" href="#">Coba Sekarang</a>
+                    <a class="cta-btn mt-3" href="{{ url('login') }}">Coba Sekarang</a>
                 </div>
 
             </div>
