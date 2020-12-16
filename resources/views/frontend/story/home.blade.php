@@ -17,10 +17,12 @@
                     <p class="mt-3 mb-3 text-muted" style="font-size: 20px;">
                         Baca cerita teman-teman kita untuk memberi perhatian untuk teman-teman sesama kita.
                     </p>
+                    <div class="section-btn">
+                        <a href="#ceritamu" class="btn-baca scrollto">Selengkapnya</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <hr>
     </section>
 
 

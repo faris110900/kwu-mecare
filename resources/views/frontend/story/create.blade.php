@@ -11,7 +11,7 @@
                 {{ csrf_field() }}
                 <div class="form-group mt-3">
                     <label for="">Judul Cerita</label>
-                    <input type="text" name="title" class="form-control" placeholder="Judul Cerita ...">
+                    <input type="text" name="title" class="form-control" placeholder="Judul Cerita ..." autocomplete="off">
                 </div>
 
                 <div class="form-group">
