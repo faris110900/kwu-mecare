@@ -15,7 +15,7 @@
 
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
@@ -36,7 +36,10 @@
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
 
-        <h1 class="logo mr-auto"><a href="{{ url('/') }}">Afecto</a></h1>
+        {{-- <h1 class="logo mr-auto"><a href="{{ url('/') }}">Afecto</a></h1> --}}
+        <a href="{{ url('/') }}" class="logo mr-auto">
+            <img src="{{ asset('assets/img/logo-fix.png') }}" alt="" class="img-fluid">
+        </a>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -44,7 +47,7 @@
                 <ul>
                     <li class="active"><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ url('story-home') }}">Ceritamu</a></li>
-                    <li><a href="#portfolio">Konseling</a></li>
+                    <li><a href="{{ url('konseling') }}">Konseling</a></li>
                     <li><a href="{{ url('langganan') }}">Langganan</a></li>
                     <li class="drop-down"><a href="">Moodku</a>
                         <ul>
@@ -268,7 +271,6 @@
             <div class="container">
 
                 <div class="section-title">
-                    <span>Team</span>
                     <h2>Team</h2>
                 </div>
 
@@ -279,7 +281,7 @@
                             <h4>Apriliani Nur Afifah</h4>
                             <span>CEO</span>
                             <p>
-                               "Kami tahu bahwa kami tidak tahu. Kami kami yakin bahwa kami mampu untuk mencari tahu"
+                               "Kami tahu bahwa kami tidak tahu. Tetapi kami yakin bahwa kami mampu untuk mencari tahu"
                             </p>
                             <div class="social">
                                 <a href="https://twitter.com/aprilianix"><i class="icofont-twitter"></i></a>
@@ -293,10 +295,9 @@
                         <div class="member">
                             <img src="{{ asset('assets/img/team/adel.jpg') }}" alt="">
                             <h4>Adelia Nuroktaviany Wisan Putri</h4>
-                            <span>UI/UX</span>
+                            <span>COO</span>
                             <p>
-                                "Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum
-                                rerum temporibus"
+                                "aspire to inspire before we expire"
                             </p>
                             <div class="social">
                                 <a href="https://www.instagram.com/adelianwp/"><i class="icofont-instagram"></i></a>
@@ -308,10 +309,9 @@
                         <div class="member">
                             <img src="{{ asset('assets/img/team/fanani.jpg') }}" alt="">
                             <h4>Achmad Fanani Aminulloh</h4>
-                            <span>UI/UX</span>
+                            <span>CMO</span>
                             <p>
-                               "Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum
-                                toro des clara"
+                               "Teruslah Berjuang"
                             </p>
                             <div class="social">
                                 <a href="https://www.instagram.com/fananisu/"><i class="icofont-instagram"></i></a>
@@ -325,9 +325,9 @@
                         <div class="member">
                             <img src="{{ asset('assets/img/team/fadil.jpg') }}" alt="">
                             <h4>M. Fadil Muhtarom Laoegi</h4>
-                            <span>Frontend Developer</span>
+                            <span>Programmer</span>
                             <p>
-                                "Omah larang"
+                                "Make your Choice and You can Change the World"
                             </p>
                             <div class="social">
                                 <a href="https://twitter.com/fdlml_"><i class="icofont-twitter"></i></a>
@@ -342,7 +342,7 @@
                         <div class="member">
                             <img src="{{ asset('assets/img/team/faris.jpg') }}" alt="">
                             <h4>Faris Rizqilail</h4>
-                            <span>Fullstack Developer</span>
+                            <span>CTO</span>
                             <p>
                                 "Jangan Berusaha"
                             </p>
@@ -371,7 +371,7 @@
 
                 <div class="row  justify-content-center">
                     <div class="col-lg-6">
-                        <h3>Afecto</h3>
+                        <img src="{{ asset('assets/img/font.png') }}" alt="" class="img-fluid" width="400px">
                         <p>Dapatkan solusi lengkap dan komprehensif untuk merawat dan menjaga kesehatan mentalmu. Hidup
                             sehat mental dan bahagia tinggal selangkah lagi.</p>
                     </div>

@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -25,7 +25,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -222,7 +222,7 @@ h1, h2, h3, h4, h5, h6 {
 } */
 
 .get-started-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   padding: 10px 30px 10px 30px;
@@ -380,7 +380,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -615,7 +615,7 @@ section {
 }
 
 .about .btn-coba {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -634,7 +634,7 @@ section {
 }
 
 .about .btn-coba-border {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -677,7 +677,7 @@ section {
 }
 
 .konsultasi .btn-coba {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -696,7 +696,7 @@ section {
 }
 
 .konsultasi .btn-coba-border {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -738,7 +738,7 @@ section {
 }
 
 .meditasi .btn-coba {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -757,7 +757,7 @@ section {
 }
 
 .meditasi .btn-coba-border {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -799,7 +799,7 @@ section {
 }
 
 .pixel .btn-coba {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -818,7 +818,7 @@ section {
 }
 
 .pixel .btn-coba-border {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -847,7 +847,7 @@ section {
 .counts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 14px;
   font-weight: 600;
 }
@@ -1088,7 +1088,7 @@ section {
 }
 
 .cta .cta-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -1612,7 +1612,7 @@ section {
 }
 
 .my-story .btn-create{
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -1668,7 +1668,7 @@ section {
 }
 
 .create-story .btn-create{
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -1707,7 +1707,7 @@ section {
 }
 
 .edit-story .btn-edit{
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -1760,7 +1760,7 @@ section {
 }
 
 .show-story h1 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin-top: 40px;
   font-size: 48px;
   font-weight: 700;
@@ -1769,7 +1769,7 @@ section {
 }
 
 .show-story h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin-top: 40px;
   font-size: 30px;
   font-weight: 700;
@@ -2028,4 +2028,152 @@ section {
 .btn-baca-langganan:hover {
   background: #008a63;
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Doctors
+--------------------------------------------------------------*/
+#hero-konseling h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+#hero-konseling h2 {
+  color: #858ea1;
+  margin: 10px 0  30px 0;
+  font-size: 24px;
+}
+
+@media (max-width: 600px) {
+  #hero-konseling h1 {
+    font-size: 36px;
+  }
+
+  #hero-konseling h2 {
+    font-size: 15px;
+  }
+}
+
+.doctors {
+  background: #fff;
+}
+
+.doctors .member {
+  position: relative;
+  box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.doctors .member .pic {
+  overflow: hidden;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.doctors .member .pic img {
+  transition: ease-in-out 0.3s;
+}
+
+.doctors .member:hover img {
+  transform: scale(1.1);
+}
+
+.doctors .member .member-info {
+  padding-left: 30px;
+}
+
+.doctors .member h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #2c4964;
+}
+
+.doctors h2 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+@media (max-width: 600px) {
+  .doctors h1 {
+    font-size: 36px;
+  }
+
+  .doctors h2 {
+    font-size: 15px;
+  }
+}
+
+.doctors .member span {
+  display: block;
+  font-size: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: 500;
+}
+
+.doctors .member span::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #b2c8dd;
+  bottom: 0;
+  left: 0;
+}
+
+.doctors .member p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+
+.doctors .member .social {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.doctors .member .social a {
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+  background: #a0bcd5;
+}
+
+.doctors .member .social a i {
+  color: #fff;
+  font-size: 16px;
+  margin: 0 2px;
+}
+
+.doctors .btn-chat {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #25c196;
+  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+}
+
+.doctors .btn-chat:hover {
+  background: #7986BF;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
 }

@@ -7,7 +7,7 @@
 
           <div class="row  justify-content-center">
               <div class="col-lg-6">
-                  <h3>Afecto</h3>
+                <img src="{{ asset('assets/img/font.png') }}" alt="" class="img-fluid" width="400px">
                   <p>Dapatkan solusi lengkap dan komprehensif untuk merawat dan menjaga kesehatan mentalmu. Hidup
                       sehat mental dan bahagia tinggal selangkah lagi.</p>
               </div>

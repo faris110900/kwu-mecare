@@ -12,6 +12,8 @@
         @yield('title')
     </title>
 
+    <link href="{{ asset('assets/img/logo.png') }}" rel="icon">
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 

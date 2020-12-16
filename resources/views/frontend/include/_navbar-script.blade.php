@@ -4,13 +4,13 @@
 
         {{-- <h1 class="logo mr-auto"><a href="{{ url('/') }}">Afecto</a></h1> --}}
             <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{ asset('assets/img/logo2.png') }}" alt="" class="img-fluid"></a>
+            <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{ asset('assets/img/logo-fix.png') }}" alt="" class="img-fluid"></a>
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                     <li class="{{ Request::segment(0) === 'home' ? 'active' : null }}"><a href="{{ url('/') }}">Home</a></li>
                     <li class="{{ Request::segment(1) === 'story-home' ? 'active' : null }}"><a href="{{ url('story-home') }}">Ceritamu</a></li>
-                    <li><a href="">Konseling</a></li>
+                    <li class="{{ Request::segment(1) === 'story-home' ? 'active' : null }}"><a href="{{ url('konseling') }}">Konseling</a></li>
                     <li class="{{ Request::segment(2) === 'langganan' ? 'active' : null }}"><a href="{{ url('langganan') }}">Langganan</a></li>
                     <li class="drop-down"><a href="">Moodku</a>
                         <ul>

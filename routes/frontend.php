@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Fortify\Http\Controllers\RegisteredUserController;
 
 Route::name('auth.')->group(function () {
     Route::group([
@@ -15,10 +16,12 @@ Route::name('frontend.')->group(function () {
         'namespace' => 'Frontend',
     ], function () {
 
+        
 
         Route::get('story-home', 'StoryController@home')->name('story-home');
         Route::get('story-read/{story}/', 'StoryController@show')->name('story-read');
         Route::get('langganan', 'LanggananController@index')->name('langganan');
+        Route::get('konseling', 'DoctorController@index')->name('konseling');
     });
 });
 
