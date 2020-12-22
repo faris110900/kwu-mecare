@@ -3,7 +3,6 @@
 @section('title', 'Ceritaku')
 
 @section('content')
-{{-- {{ $react }} --}}
 
     <section id="my-story" class="my-story">
         <div class="container mt-3 d-flex justify-content-center">
@@ -36,6 +35,7 @@
                                 {{ $story->title }}
                             </b></h2>
                     </a>
+                    
                     <p class=" text-left" align="left">
                         {!! Str::limit($story->content, 400) !!}
                     </p>
@@ -44,8 +44,21 @@
                             <div class="col-lg-6" align="left">
                                 <a href="{{ route('frontend.story.show', $story) }}">Read more</a>
                                 <span class="text-muted ml-2"><i>{{ $story->created_at->diffForHumans() }}</i></span>
+                                <span class="ml-3">
+                                    <i class="far fa-smile-wink fa-1x" style="color : #00c9a7;"></i> 
+                                    <small>{{ $reactHappy }}</small>
+                                </span>
+                                <span class="ml-3">
+                                    <i class="far fa-frown-open fa-1x" style="color: #825558;"></i>
+                                    <small>{{ $reactSad }}</small>
+                                </span>
+                                <span class="ml-3">
+                                    <i class="far fa-sad-tear fa-1x" style="color: #e33737;"></i>
+                                    <small>{{ $reactCry }}</small>
+                                </span>
                             </div>
                             <div class="col-lg-6" align="right">
+                                
                                 <div class="dropdown">
                                     <a class="btn " role="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">

@@ -24,12 +24,16 @@ class StoryController extends Controller
     public function index()
     {
         $stories = Auth::user()->id;
-        // $react = DB::table('reacts')->where('react_happy', '=', 1 );
-        $react = React::withCount('reacts')->get();
+        // $reacts = DB::table('reacts')
+        //         ->where('react_happy', '=', 'happy')
+        //         ->count();
+        $reactHappy = React::all()->where('react_happy', '=', 'happy')->count();
+        $reactSad = React::all()->where('react_sad', '=', 'sad')->count();
+        $reactCry = React::all()->where('react_cry', '=', 'cry')->count();
         // $stories = Story::orderBy('user_id')->get();
         $stories = auth()->user()->Storys;
 
-        return view('frontend.story.index', compact('stories', 'react'));
+        return view('frontend.story.index', compact('stories', 'reactHappy', 'reactSad', 'reactCry'));
     }
 
     public function home(){
