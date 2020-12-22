@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Story;
+use App\Models\React;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\DB;
 
 class StoryController extends Controller
 {
@@ -22,10 +24,12 @@ class StoryController extends Controller
     public function index()
     {
         $stories = Auth::user()->id;
+        // $react = DB::table('reacts')->where('react_happy', '=', 1 );
+        $react = React::withCount('reacts')->get();
         // $stories = Story::orderBy('user_id')->get();
         $stories = auth()->user()->Storys;
 
-        return view('frontend.story.index', compact('stories'));
+        return view('frontend.story.index', compact('stories', 'react'));
     }
 
     public function home(){

@@ -1827,6 +1827,18 @@ section {
   }
 }
 
+.react .fa-smile-wink {
+  color: #444444;
+}
+
+.react .fa-frown-open {
+  color: #444444;
+}
+
+.react .fa-sad-tear {
+  color: #444444;
+}
+
 .react .fa-smile-wink:hover {
   color : #00c9a7;
   transition: 0.5s;

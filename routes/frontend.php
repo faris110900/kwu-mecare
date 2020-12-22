@@ -16,8 +16,6 @@ Route::name('frontend.')->group(function () {
         'namespace' => 'Frontend',
     ], function () {
 
-        
-
         Route::get('story-home', 'StoryController@home')->name('story-home');
         Route::get('story-read/{story}/', 'StoryController@show')->name('story-read');
         Route::get('langganan', 'LanggananController@index')->name('langganan');
@@ -49,6 +47,10 @@ Route::name('frontend.')->group(function () {
         Route::get('story/{stories}/    ', 'StoryController@index')->name('story');
         Route::get('/story/{story}/delete', 'StoryController@destroy')->name('story.delete');
         Route::resource('story', 'StoryController');
+        
+        //React Route
+        // Route::get('react', 'ReactController@store')->name('react.store');
+        Route::resource('react', 'ReactController');
 
         //Cek Keadaan Route
         Route::get('cek-keadaan', 'CekController@index');

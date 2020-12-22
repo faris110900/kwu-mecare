@@ -32,8 +32,9 @@
                 @foreach ($stories as $story)
                     <div class="col-md-6 mt-4 mt-md-0">
                         <div class="img">
-                        <img src="{{ asset('storage/' . $story->image) }}"
-                            class="img-fluid" alt="" srcset="">
+                            <a href="{{ route('frontend.story-read', $story) }}">
+                                <img src="{{ asset('storage/' . $story->image) }}" class="img-fluid" alt="" srcset="">
+                            </a>
                         </div>
                         <div class="content-story">
                             <a href="{{ route('frontend.story-read', $story) }}" class="title-link">
@@ -52,7 +53,8 @@
                                             class="text-muted ml-2"><i>{{ $story->created_at->diffForHumans() }}</i></span>
                                     </div>
                                     <div class="col-lg-6" align="right">
-                                        <a href="https://twitter.com/share?url={{ $story->title }}&text={!! $story->content !!}" target="blank">
+                                        <a href="https://twitter.com/share?url={{ $story->title }}&text={!!  $story->content !!}"
+                                            target="blank">
                                             <i class="fab fa-telegram-plane"></i>
                                         </a>
                                         {{-- <div class="dropdown">

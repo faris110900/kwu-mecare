@@ -28,10 +28,26 @@
 
             <h2 align="center">Apa tanggapanmu ?</h2>
             <div class="react" align="center">
-                <i class="far fa-smile-wink fa-3x"></i>
-                <i class="far fa-frown-open fa-3x ml-3"></i>
-                <i class="far fa-sad-tear fa-3x ml-3"></i>
+                <form action="{{ route('frontend.react.store') }}" method="post">
+                    {{-- {{ $react }} --}}
+                    {{ csrf_field() }}
+                    <input class="form-control" type="hidden" name="story_id" value="{{ $story->id }}">
+
+                    <button type="submit" name="react_happy" value="react_happy" class="btn-react" style="border:none; background: none;">
+                        <i class="far fa-smile-wink fa-3x"></i>
+                    </button>
+                    
+                    <button type="submit" name="react_sad" value="react_sad"  class="btn-react" style="border:none; background: none;">
+                        <i class="far fa-frown-open fa-3x ml-3"></i>
+                    </button>
+                    
+                    <button type="submit" name="react_cry" class="btn-react" value="react_cry" style="border:none; background: none;">
+                        <i class="far fa-sad-tear fa-3x ml-3"></i>
+                    </button>
+                    
+                </form>
             </div>
+            {{-- <livewire:react-post /> --}}
         </div>
     </section>
 

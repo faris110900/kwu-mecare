@@ -25,62 +25,67 @@
         </div>
     </section>
 
-        {{-- <div class="container">
-            <div class="langganan-title" align="center" data-aos="fade-up" data-aos-duration="2000">
-                <h2>Langganan</h2>
-            </div> --}}
+    {{-- <div class="container">
+        <div class="langganan-title" align="center" data-aos="fade-up" data-aos-duration="2000">
+            <h2>Langganan</h2>
+        </div> --}}
 
-            <section id="pricing" class="pricing">
-                <div class="container">
+        <section id="pricing" class="pricing">
+            <div class="container">
 
-                    <div class="section-title" data-aos="fade-up">
-                        <h2>Langganan</h2>
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Langganan</h2>
+                </div>
+
+                <div class="row d-flex justify-content-center" data-aos="fade-left">
+
+                    <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+                        <div class="box featured" data-aos="zoom-in" data-aos-delay="200">
+                            <h3>Free</h3>
+                            <h4><sup>Rp.</sup>0<span></span></h4>
+                            <ul>
+                                <li>Berbagi Cerita</li>
+                                <li>Konsultasi</li>
+                                <li class="na">Meditasi</li>
+                                <li class="na">Mental Pixel</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                @if (Auth::check())
+                                    {{-- <a href="#" class="btn-buy">Beli</a> --}}
+                                    <a href="{{ url('story') }}" class="btn-buy">Coba</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="btn-buy">Daftar</a>
+                                @endif
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="row d-flex justify-content-center" data-aos="fade-left">
-
-                        <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-                            <div class="box featured" data-aos="zoom-in" data-aos-delay="200">
-                                <h3>Free</h3>
-                                <h4><sup>Rp.</sup>0<span></span></h4>
-                                <ul>
-                                    <li>Berbagi Cerita</li>
-                                    <li>Konsultasi</li>
-                                    <li class="na">Meditasi</li>
-                                    <li class="na">Mental Pixel</li>
-                                </ul>
-                                <div class="btn-wrap">
-                                    <a href="{{ route('login') }}" class="btn-buy">Daftar</a>
-                                </div>
+                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                        <div class="box" data-aos="zoom-in" data-aos-delay="400">
+                            <span class="advanced">Advanced</span>
+                            <h3>Ultimate</h3>
+                            <h4><sup>Rp.</sup>200.000<span>/Bulan</span></h4>
+                            <ul>
+                                <li>Berbagi Cerita</li>
+                                <li>Konsultasi</li>
+                                <li>Meditasi</li>
+                                <li>Mental Pixel</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                @if (Auth::check())
+                                    <a href="" class="btn-buy" disabled>Daftar</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="btn-buy">Beli</a>
+                                @endif
                             </div>
                         </div>
-
-                        <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-                            <div class="box" data-aos="zoom-in" data-aos-delay="400">
-                                <span class="advanced">Advanced</span>
-                                <h3>Ultimate</h3>
-                                <h4><sup>Rp.</sup>200.000<span>/Bulan</span></h4>
-                                <ul>
-                                    <li>Berbagi Cerita</li>
-                                    <li>Konsultasi</li>
-                                    <li>Meditasi</li>
-                                    <li>Mental Pixel</li>
-                                </ul>
-                                <div class="btn-wrap">
-                                    @if (Auth::check())
-                                        <a href="#" class="btn-buy">Beli</a>
-                                    @else
-                                        <a href="{{ route('login') }}" class="btn-buy">Beli</a>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>
-            </section><!-- End Pricing Section -->
 
-        </div>
+            </div>
+        </section><!-- End Pricing Section -->
+
+    </div>
 
 @endsection

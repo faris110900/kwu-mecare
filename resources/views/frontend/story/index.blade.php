@@ -3,6 +3,7 @@
 @section('title', 'Ceritaku')
 
 @section('content')
+{{-- {{ $react }} --}}
 
     <section id="my-story" class="my-story">
         <div class="container mt-3 d-flex justify-content-center">
