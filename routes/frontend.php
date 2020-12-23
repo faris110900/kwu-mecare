@@ -20,6 +20,8 @@ Route::name('frontend.')->group(function () {
         Route::get('story-read/{story}/', 'StoryController@show')->name('story-read');
         Route::get('langganan', 'LanggananController@index')->name('langganan');
         Route::get('konseling', 'DoctorController@index')->name('konseling');
+        Route::get('meditasi-home', 'MeditasiController@index')->name('meditasi-home');
+        Route::get('pixel-home', 'PixelController@index')->name('pixel-home');
     });
 });
 
@@ -35,10 +37,10 @@ Route::name('frontend.')->group(function () {
         // })->name('dashboard');
 
         // Route::get('/', function () {
-        //     return view('welcome');
-        // })->name('frontend.welcome');
+            //     return view('welcome');
+            // })->name('frontend.welcome');
 
-        
+            
         Route::get('welcome', 'HomeController@index')->name('welcome');    
         Route::get('welcome', 'HomeController@index')->name('welcome');
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
@@ -51,9 +53,15 @@ Route::name('frontend.')->group(function () {
         //React Route
         // Route::get('react', 'ReactController@store')->name('react.store');
         Route::resource('react', 'ReactController');
-
+        
         //Cek Keadaan Route
         Route::get('cek-keadaan', 'CekController@index');
+
+        //Meditasi Route
+        Route::resource('meditasi', 'MeditasiController');
+
+        //Pixel Route
+        Route::resource('pixel', 'PixelController');
     });
 });
 

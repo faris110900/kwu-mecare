@@ -15,8 +15,8 @@
                     <li class="drop-down"><a href="">Moodku</a>
                         <ul>
                             
-                            <li><a href="#">Meditasi</a></li>
-                            <li><a href="#">Mental Pixel</a></li>
+                            <li><a href="{{ url('meditasi-home') }}">Meditasi</a></li>
+                            <li><a href="{{ url('pixel-home') }}">Mental Pixel</a></li>
                         </ul>
                     </li>
                     @if(Auth::check())

@@ -2189,3 +2189,46 @@ section {
   background: #7986BF;
   box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
 }
+
+#perbaikan img {
+  width: 500px;
+}
+
+#perbaikan h1{
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+@media(max-width: 600px) {
+  #perbaikan h1 {
+    font-size: 15px;
+  }
+}
+
+#hero-pixel h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+#hero-pixel h2 {
+  color: #858ea1;
+  margin: 10px 0  30px 0;
+  font-size: 24px;
+}
+
+@media (max-width: 600px) {
+  #hero-pixel h1 {
+    font-size: 36px;
+  }
+
+  #hero-pixel h2 {
+    font-size: 15px;
+  }
+}
+
