@@ -2232,3 +2232,60 @@ section {
   }
 }
 
+
+.fungsi-pixel .content h3 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #5f687b;
+}
+
+.fungsi-pixel .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fungsi-pixel .content ul li {
+  padding-bottom: 10px;
+}
+
+.fungsi-pixel .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #25c196;
+}
+
+.fungsi-pixel .content p:last-child {
+  margin-bottom: 0;
+}
+
+.fungsi-pixel .btn-coba {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #25c196;
+  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+}
+
+.fungsi-pixel .btn-coba:hover {
+  background: #7986BF;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}
+
+.fungsi-pixel .btn-coba-border {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #7986BF;
+  border: 2px solid #7986BF;
+}

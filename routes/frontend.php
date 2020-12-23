@@ -11,6 +11,7 @@ Route::name('auth.')->group(function () {
     });
 });
 
+
 Route::name('frontend.')->group(function () {
     Route::group([
         'namespace' => 'Frontend',
@@ -21,7 +22,7 @@ Route::name('frontend.')->group(function () {
         Route::get('langganan', 'LanggananController@index')->name('langganan');
         Route::get('konseling', 'DoctorController@index')->name('konseling');
         Route::get('meditasi-home', 'MeditasiController@index')->name('meditasi-home');
-        Route::get('pixel-home', 'PixelController@index')->name('pixel-home');
+        Route::get('pixel-home', 'PixelController@home')->name('pixel-home');
     });
 });
 
@@ -76,6 +77,14 @@ Route::name('frontend.')->group(function () {
         })->name('admin.dashboard');
         
         Route::get('DashboardAdmin', 'DashboardAdminController@index')->name('admin.dash');
+        
+        //Emosi Route Admin
+        Route::resource('emosi', 'EmosiController');
+        Route::get('emosi/{emosi}/delete', 'EmosiController@destroy')->name('emosi.delete');
+
+        //Faktor Route Admin
+        Route::resource('faktor', 'FaktorController');
+        Route::get('faktor/{faktor}/delete', 'FaktorController@destroy')->name('faktor.delete');
 
        
     });

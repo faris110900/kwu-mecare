@@ -9,6 +9,8 @@
 <!--   ckeditor   -->
 <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
 
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
 
 <script>
   window.TrackJS &&

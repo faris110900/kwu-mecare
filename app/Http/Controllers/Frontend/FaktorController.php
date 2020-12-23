@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Faktor;
+use RealRashid\SweetAlert\Facades\Alert;
 
-class PixelController extends Controller
+class FaktorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +16,9 @@ class PixelController extends Controller
      */
     public function index()
     {
-        return view('frontend.pixel.index');
-    }
+        $faktor = Faktor::all();
 
-    public function home(){
-        
-        return view('frontend.pixel.home');
+        return view('admin.faktor.index', compact('faktor'));
     }
 
     /**
@@ -29,7 +28,7 @@ class PixelController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.faktor.create');
     }
 
     /**
@@ -40,7 +39,13 @@ class PixelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Alert::success('success', 'Data berhasil ditambah');
+
+        Faktor::create([
+            'name' => request('name')
+        ]);
+
+        return redirect()->route('frontend.faktor.index');
     }
 
     /**
@@ -60,9 +65,9 @@ class PixelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Faktor $faktor)
     {
-        //
+        return view('admin.faktor.edit', compact('faktor'));
     }
 
     /**
@@ -72,9 +77,15 @@ class PixelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Faktor $faktor)
     {
-        //
+        Alert::success('success', 'Data berhasil diubah');
+
+        $faktor->update([
+            'name' => request('name')
+        ]);
+
+        return redirect()->route('frontend.faktor.index');
     }
 
     /**
@@ -83,8 +94,11 @@ class PixelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Faktor $faktor)
     {
-        //
+        $faktor->delete();
+        Alert::success('Success', 'Data berhasil dihapus');
+
+        return redirect()->route('frontend.faktor.index');
     }
 }

@@ -99,12 +99,12 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class=" nav-link active " href="{{ url('dashboard') }}"> <i class="ni ni-tv-2 text-primary"></i>
+                    <a class=" nav-link active " href="{{ url('admin') }}"> <i class="ni ni-tv-2 text-primary"></i>
                         Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class=" nav-link" href="{{ url('/') }}"> <i class="ni ni-collection text-primary"></i> Blog
+                    <a class=" nav-link" href="{{ url('/admin') }}"> <i class="ni ni-collection text-primary"></i> Blog
                     </a>
                 </li>
                     {{-- <li class="nav-item">
@@ -113,13 +113,18 @@
                         </a>
                     </li> --}}
                 <li class="nav-item">
-                    <a class="nav-link " href="{{ url('/') }}">
+                    <a class="nav-link " href="{{ url('/admin') }}">
                         <i class="fas fa-comments text-primary"></i> Konsultasi
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{ url('/') }}">
-                        <i class="fas fa-sad-tear text-primary"></i> Cek Keadaan
+                    <a class="nav-link " href="{{ url('/emosi') }}">
+                        <i class="fas fa-sad-tear text-primary"></i> Emosi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ url('/faktor') }}">
+                        <i class="fas fa-industry text-primary"></i> Faktor
                     </a>
                 </li>
             </ul>

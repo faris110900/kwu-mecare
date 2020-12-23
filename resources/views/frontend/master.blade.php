@@ -15,11 +15,10 @@
 <body>
         @include('frontend.include._navbar-script')
         <!-- Header -->
-        <div class="container-fluid">
+        
                 
             @yield('content')
 
-        </div>
 
         @include('frontend.include._footer')
         

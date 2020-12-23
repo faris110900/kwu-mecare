@@ -8,4 +8,6 @@
   <!-- CSS Files -->
   <link href="{{ asset('/argon/assets/css/argon-dashboard.css?v=1.1.0') }}" rel="stylesheet" />
   
+  <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet" />
+  
   @stack('header-scripts')

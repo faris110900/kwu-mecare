@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\Emosi;
 
-class PixelController extends Controller
+class EmosiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +16,9 @@ class PixelController extends Controller
      */
     public function index()
     {
-        return view('frontend.pixel.index');
-    }
+        $emosi = Emosi::all();
 
-    public function home(){
-        
-        return view('frontend.pixel.home');
+        return view('admin.emosi.index', compact('emosi'));
     }
 
     /**
@@ -29,7 +28,7 @@ class PixelController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.emosi.create');
     }
 
     /**
@@ -40,7 +39,13 @@ class PixelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Alert::success('success', 'Data berhasil ditambah');
+
+        Emosi::create([
+            'name' => request('name')
+        ]);
+
+        return redirect()->route('frontend.emosi.index');
     }
 
     /**
@@ -60,9 +65,10 @@ class PixelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Emosi $emosi)
     {
-        //
+
+        return view('admin.emosi.edit', compact('emosi'));
     }
 
     /**
@@ -72,9 +78,15 @@ class PixelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Emosi $emosi)
     {
-        //
+        Alert::success('success', 'Data berhasil diupdate');
+
+        $emosi->update([
+            'name' => request('name')
+        ]);
+
+        return redirect()->route('frontend.emosi.index');
     }
 
     /**
@@ -83,8 +95,11 @@ class PixelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Emosi $emosi)
     {
-        //
+        $emosi->delete();
+        Alert::success('Success', 'Data berhasil dihapus');
+
+        return redirect()->route('frontend.emosi.index');
     }
 }
