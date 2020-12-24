@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Pixel;
 use App\Models\Emosi;
 use App\Models\Faktor;
+use App\Models\PixelReact;
+
 
 class PixelController extends Controller
 {
@@ -40,6 +43,13 @@ class PixelController extends Controller
         return view('frontend.pixel.create', compact('faktor', 'emosi'));
     }
 
+    public function pixelCreate(){
+        $pixelReact = PixelReact::all();
+
+        return view('frontend.pixel.pixelReact', compact('pixelReact'));
+    }
+
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -48,7 +58,45 @@ class PixelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+    }
+
+    public function pixelStore(Request $request){
+
+        $sangatBuruk = "";
+        $buruk = "";
+        $biasa = "";
+        $baik = "";
+        $sangatBaik = "";
+
+        if ($request->get('sangat_buruk') == 'sangat_buruk' ) {
+            $sangatBuruk = "sangat buruk";
+        } else if ($request->get('buruk') == 'buruk') {
+            $buruk = "buruk";
+        } else if ($request->get('biasa') == 'biasa') {
+            $biasa = "biasa";
+        } else if($request->get('baik') == 'baik'){
+            $baik = "baik";
+        } else if($request->get('sangat_baik') == 'sangat_baik') {
+            $sangatBaik = "sangat baik";
+        } else {
+            dd('gagal');
+        }
+
+        PixelReact::create([
+            'user_id' => Auth::id(),
+            'sangat_buruk' => $sangatBuruk,
+            'buruk' => $buruk,
+            'biasa' => $biasa,
+            'baik' => $baik,
+            'sangat_baik' => $sangatBaik
+            // 'content' => $this->content
+        ]);
+
+        // dd($request);
+
+        return redirect()->route('frontend.pixel.create');
+
     }
 
     /**

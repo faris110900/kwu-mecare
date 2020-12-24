@@ -64,6 +64,9 @@ Route::name('frontend.')->group(function () {
         //Pixel Route
         Route::resource('pixel', 'PixelController');
         Route::get('pixel-cek', 'PixelController@create')->name('pixel.cek');
+        Route::get('pixel-react', 'PixelController@pixelCreate')->name('pixel.react');
+        Route::post('pixel-reaction', 'PixelController@pixelStore')->name('pixel.reaction');
+
     });
 });
 

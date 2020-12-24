@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePixelsTable extends Migration
+class CreatePixelReactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreatePixelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pixels', function (Blueprint $table) {
+        Schema::create('pixel_reacts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('pixel_id');
-            $table->string('emosi');
-            $table->string('faktor');
+            $table->string('sangat_buruk');
+            $table->string('buruk');
+            $table->string('biasa');
+            $table->string('baik');
+            $table->string('sangat_baik');
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ class CreatePixelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pixels');
+        Schema::dropIfExists('pixel_reacts');
     }
 }

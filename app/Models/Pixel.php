@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Emosi;
 use App\Models\Faktor;
+use App\Models\PixelReact;
 
 class Pixel extends Model
 {
@@ -13,11 +14,7 @@ class Pixel extends Model
 
     protected $fillable = [
         'user_id',
-        'sangat_buruk',
-        'buruk',
-        'biasa',
-        'baik',
-        'sangat_baik',
+        'pixel_id',
         'emosi',
         'faktor'
     ];
@@ -30,5 +27,10 @@ class Pixel extends Model
     public function faktor(){
 
         return $this->belongsTo(Faktor::class);
+    }
+
+    public function pixelReact(){
+
+        return $this->belongsTo(PixelReact::class);
     }
 }

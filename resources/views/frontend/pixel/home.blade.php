@@ -38,7 +38,7 @@
                     Luangkan sedikit waktumu untuk melakukan mood track, agar dapat mengetahui apa yang menyebabkan moodmu berantakan.
                 </h6>
                 <div class="btn-group mt-3">
-                    <a href="{{ route('frontend.pixel.cek') }}" class="btn-coba scrollto">Coba Sekarang</a>
+                    <a href="{{ route('frontend.pixel.react') }}" class="btn-coba scrollto">Coba Sekarang</a>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-duration="3000">

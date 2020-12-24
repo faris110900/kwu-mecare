@@ -2324,10 +2324,20 @@ section {
   margin-bottom: 40px   ;
 }
 
+/* .react-pixel ul li {
+  list-style: none;
+  position: relative;
+  display: block;
+} */
+
 .react-pixel .fa-sad-tear:hover {
   color: #FF8857;
   transition: 0.5s;
 }
+
+/* .react-pixel ul li.selected a{
+  color: #FF8857;
+} */
 
 .react-pixel .fa-frown:hover{
   color: #BA97FF;
@@ -2356,7 +2366,7 @@ section {
 }
 
 .pixel .card-pixel {
-  width: 30rem;
+  width: 40rem;
   border: none;
 }
 
