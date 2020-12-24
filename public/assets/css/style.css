@@ -2289,3 +2289,92 @@ section {
   color: #7986BF;
   border: 2px solid #7986BF;
 }
+
+.pixel {
+  margin-top: 70px;
+}
+
+.pixel .member h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #2c4964;
+}
+
+.pixel h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+@media (max-width: 600px) {
+  .pixel h1 {
+    font-size: 36px;
+  }
+
+  .pixel h2 {
+    font-size: 15px;
+  }
+}
+
+.react-pixel {
+  margin-top: 40px;
+  margin-bottom: 40px   ;
+}
+
+.react-pixel .fa-sad-tear:hover {
+  color: #FF8857;
+  transition: 0.5s;
+}
+
+.react-pixel .fa-frown:hover{
+  color: #BA97FF;
+  transition: 0.5s;
+}
+
+.react-pixel .fa-meh:hover{
+  color: #8DA7FF;
+  transition: 0.5s;
+}
+
+.react-pixel .fa-smile-beam:hover {
+  color: #25C196;
+  transition: 0.5s;
+}
+
+.react-pixel .fa-laugh-wink:hover {
+  color: #D8A31E;
+  transition: 0.5s;
+}
+
+.pixel .checkbox-pixel {
+
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.pixel .card-pixel {
+  width: 30rem;
+  border: none;
+}
+
+.pixel .btn-create{
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 210px 10px 210px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #25c196;
+  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+}
+
+.pixel .btn-create:hover {
+  background: #7986BF;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}

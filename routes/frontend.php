@@ -56,13 +56,14 @@ Route::name('frontend.')->group(function () {
         Route::resource('react', 'ReactController');
         
         //Cek Keadaan Route
-        Route::get('cek-keadaan', 'CekController@index');
+        // Route::get('cek-keadaan', 'CekController@index');
 
         //Meditasi Route
         Route::resource('meditasi', 'MeditasiController');
 
         //Pixel Route
         Route::resource('pixel', 'PixelController');
+        Route::get('pixel-cek', 'PixelController@create')->name('pixel.cek');
     });
 });
 

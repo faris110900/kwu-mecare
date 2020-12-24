@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Pixel;
+use App\Models\Emosi;
+use App\Models\Faktor;
 
 class PixelController extends Controller
 {
@@ -29,7 +32,12 @@ class PixelController extends Controller
      */
     public function create()
     {
-        //
+        $emosi = Emosi::all();
+        $faktor = Faktor::all();
+
+        // dd($emosi);
+
+        return view('frontend.pixel.create', compact('faktor', 'emosi'));
     }
 
     /**

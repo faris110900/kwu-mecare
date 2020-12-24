@@ -15,6 +15,14 @@ class CreatePixelsTable extends Migration
     {
         Schema::create('pixels', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
+            $table->string('sangat_buruk');
+            $table->string('buruk');
+            $table->string('biasa');
+            $table->string('baik');
+            $table->string('sangat_baik');
+            $table->string('emosi');
+            $table->string('faktor');
             $table->timestamps();
         });
     }
