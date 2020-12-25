@@ -7,6 +7,11 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\User;
+use App\Models\Pixel;
+use App\Models\Emosi;
+use App\Models\Faktor;
+use App\Models\PixelReact;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -18,8 +23,24 @@ class ProfileController extends Controller
     public function index()
     {
         $user = User::all();
+        $pixel = Pixel::all()->where('user_id', Auth::user()->id);
+        $pixelReact = PixelReact::all();
 
-        return view('auth.profile', compact('user'));
+        
+
+        $y = [];
+        foreach ($pixel as $row) {
+            $pixelReact = PixelReact::where('id', $row->pixel_id)->where('user_id', $row->user_id)->first();
+            $x['sangat_buruk'] = $pixelReact->sangat_buruk;
+            $x['buruk'] = $pixelReact->buruk;
+            $x['biasa'] = $pixelReact->biasa;
+            $x['baik'] = $pixelReact->baik;
+            $x['sangat_baik'] = $pixelReact->sangat_baik;
+            array_push($y, $x);
+        }
+        // dd($y);
+
+        return view('auth.profile', compact('pixel', 'pixelReact', 'y', 'user'));
     }
 
     /**

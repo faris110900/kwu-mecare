@@ -53,8 +53,18 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Mood Hari ini</h5>
-                                    <span class="h2 font-weight-bold mb-0">
-                                        Baik
+                                    <span class="h4 font-weight-bold mb-0">
+                                        @if (isset($y[0]['sangat_buruk']))
+                                            {{ $y[0]['sangat_buruk'] }}
+                                        @elseif(isset($y[0]['buruk']))
+                                            {{ $y[0]['buruk'] }}
+                                        @elseif(isset($y[0]['biasa']))
+                                            {{ $y[0]['bias'] }}
+                                        @elseif(isset($y[0]['baik']))
+                                            {{ $y[0]['baik'] }}
+                                        @elseif(isset($y[0]['sangat_baik']))
+                                            {{ $y[0]['sangat_baik'] }}
+                                        @endif
                                     </span>
                                 </div>
                                 <div class="col-auto">
@@ -64,7 +74,8 @@
                                 </div>
                             </div>
                             <p class="mt-3 mb-0 text-muted text-sm">
-                                {{-- <span class="text-nowrap">Since last month</span> --}}
+                                {{-- <span class="text-nowrap">Since last month</span>
+                                --}}
                             </p>
                         </div>
                     </div>
@@ -118,6 +129,33 @@
 
 @push('footer-scripts')
     <script>
+        var yLabels = {
+            1: 'Sangat Baik',
+            2: 'Baik',
+            3: 'Bisasa',
+            4: 'Buruk',
+            5: 'Sangat Buruk',
+        }
+
+        <?php
+        $t = 0;
+        if (isset($y[0]['sangat_buruk'])) {
+            $t = 1;
+        }
+        elseif(isset($y[0]['buruk'])) {
+            $t = 2;
+        }
+        elseif(isset($y[0]['biasa'])) {
+            $t = 3;
+        }
+        elseif(isset($y[0]['baik'])) {
+            $t = 4;
+        }
+        elseif(isset($y[0]['sangat_baik'])) {
+            $t = 5;
+        }
+        ?>
+
         var ctx = document.getElementById('myChart').getContext('2d');
         var chart = new Chart(ctx, {
             // The type of chart we want to create
@@ -131,14 +169,54 @@
                     backgroundColor: '#25c196',
                     borderColor: '#7986BF',
                     data: [
-                        0, 10, 5, 2, 20, 30, 45
+                        <?= $t; ?>
                     ]
                 }]
             },
 
             // Configuration options go here
             options: {
+                // legend: {
+                //     display: false
+                // },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            // beginAtZero: true,
+                            callback: function(value, index, values) {
+                                // return yLabels[value];
+                                switch (value) {
+                                    case 5:
+                                        return 'Sangat Buruk';
+                                    break;
 
+                                    case 4:
+                                        return 'Buruk';
+                                    break;
+                                
+                                    case 3: 
+                                        return 'Biasa';
+                                    break;
+
+                                    case 2: 
+                                        return 'Baik';
+                                    break;
+
+                                    case 1: 
+                                        return 'Sangat Baik';
+                                    break;
+
+                                    default:
+                                        break;
+                                }
+                            }
+                        }
+                    }]
+                }
+                // title: {
+                //     display: true,
+                //     text: 'Shameless Bar Graph to show proficency in skills'
+                // }
             }
         });
 

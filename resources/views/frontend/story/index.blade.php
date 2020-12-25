@@ -23,38 +23,38 @@
 
     </section>
 
-    @foreach ($stories as $story)
+    @foreach ($x as $story)
         <section id="story-profile" class="story-profile">
             <div class="container">
                 <div class="img" align="center">
-                    <img src="{{ asset('storage/' . $story->image) }}" width="700px" class="img-fluid" alt="" srcset="">
+                    <img src="{{ asset('storage/' . $story['image']) }}" width="700px" class="img-fluid" alt="" srcset="">
                 </div>
                 <div class="content-story">
-                    <a href="{{ route('frontend.story.show', $story) }}" class="title-link">
+                    <a href="{{ route('frontend.story.show', $story['story_id']) }}" class="title-link">
                         <h2 class="mt-3 pt-3" align="left"><b>
-                                {{ $story->title }}
+                                {{ $story['title'] }}
                             </b></h2>
                     </a>
                     
                     <p class=" text-left" align="left">
-                        {!! Str::limit($story->content, 400) !!}
+                        {!! Str::limit($story['content'], 400) !!}
                     </p>
                     <div class="share">
                         <div class="row">
                             <div class="col-lg-6" align="left">
-                                <a href="{{ route('frontend.story.show', $story) }}">Read more</a>
-                                <span class="text-muted ml-2"><i>{{ $story->created_at->diffForHumans() }}</i></span>
+                                <a href="{{ route('frontend.story.show', $story['story_id']) }}">Read more</a>
+                                <span class="text-muted ml-2"><i>{{ $story['created_at']->diffForHumans() }}</i></span>
                                 <span class="ml-1">
                                     <i class="far fa-smile-wink fa-1x" style="color : #00c9a7;"></i> 
-                                    <small>{{ $reactHappy }}</small>
+                                    <small>{{ $story['happy'] }}</small>
                                 </span>
                                 <span class="ml-1">
                                     <i class="far fa-frown-open fa-1x" style="color: #825558;"></i>
-                                    <small>{{ $reactSad }}</small>
+                                    <small>{{ $story['sad'] }}</small>
                                 </span>
                                 <span class="ml-1">
                                     <i class="far fa-sad-tear fa-1x" style="color: #e33737;"></i>
-                                    <small>{{ $reactCry }}</small>
+                                    <small>{{ $story['cry'] }}</small>
                                 </span>
                             </div>
                             <div class="col-lg-6" align="right">
@@ -65,10 +65,10 @@
                                         <i class="fas fa-ellipsis-v" style="color: #008a63;"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="{{ route('frontend.story.edit', $story) }}">Edit
+                                        <a class="dropdown-item" href="{{ route('frontend.story.edit', $story['story_id']) }}">Edit
                                             Cerita</a>
                                         <a class="dropdown-item"
-                                            href="{{ route('frontend.story.delete', $story->id) }}">Hapus Cerita</a>
+                                            href="{{ route('frontend.story.delete', $story['story_id']) }}">Hapus Cerita</a>
                                     </div>
                                 </div>
                             </div>

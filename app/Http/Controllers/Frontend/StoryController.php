@@ -26,20 +26,32 @@ class StoryController extends Controller
     {
         $stories = Auth::user()->id;
         $react = React::all();
-        // $x = [];
-        // foreach ($react as $reactSad) {
-        //     array_push($x['sad'] = $reactSad);
-        // }
+        $story = Story::all();
+
+        $x = [];
+        foreach ($story as $row) {
+            $reactSad = React::all()->where('react_sad', '=', 'sad')->where('story_id', $row->id)->groupBy('story_id')->count();
+            $reactHappy = React::all()->where('react_happy', '=', 'happy')->where('story_id', $row->id)->groupBy('story_id')->count();
+            $reactCry = React::all()->where('react_cry', '=', 'cry')->where('story_id', $row->id)->groupBy('story_id')->count();
+            $y['sad'] = $reactSad;
+            $y['happy'] = $reactHappy;
+            $y['cry'] = $reactCry;
+            $y['story_id'] = $row->id;
+            $y['title'] = $row->title;
+            $y['slug'] = $row->slug;
+            $y['image'] = $row->image;
+            $y['content'] = $row->content;
+            $y['created_at'] = $row->created_at;
+
+            array_push($x, $y);
+        }
         // dd($x);
         
         
-        $reactSad = React::all()->where('react_sad', '=', 'sad')->groupBy('story_id')->count();
-        $reactHappy = React::all()->where('react_happy', '=', 'happy')->groupBy('story_id')->count();
-        $reactCry = React::all()->where('react_cry', '=', 'cry')->groupBy('story_id')->count();
         // $stories = Story::orderBy('user_id')->get();
         $stories = auth()->user()->Storys;
         
-        return view('frontend.story.index', compact('stories', 'reactHappy', 'reactSad', 'reactCry'));
+        return view('frontend.story.index', compact('stories', 'reactHappy', 'reactSad', 'reactCry', 'x', 'story'));
     }
 
     public function home(){
