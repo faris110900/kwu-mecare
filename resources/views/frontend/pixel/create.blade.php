@@ -9,6 +9,8 @@
             <form action="{{ route('frontend.pixel.store') }}" method="post">
                 {{ csrf_field() }}
 
+                <input class="form-control" type="hidden" name="pixel_id" value="{{ $pixelReact[0]->id }}">
+
                 <div class="card-flex" align="center">
                     <div class="card card-pixel shadow p-3 mb-5 bg-white rounded">
                         <div class="card-body">
@@ -27,12 +29,6 @@
                                             </label>
                                         </div>
                                     </div>
-                                    {{-- @continue --}}
-                                    {{-- @php
-                                    if ($emo->id == 2) {
-                                    echo "<br>";
-                                    }
-                                    @endphp --}}
 
                                 @endforeach
 

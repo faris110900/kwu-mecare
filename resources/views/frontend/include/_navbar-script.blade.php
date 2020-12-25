@@ -24,7 +24,7 @@
                         style="color: #7986BF;">{{ Auth::user()->name }}</a>
                     <ul>
                         <li class="{{ Request::segment(1) === 'story' ? 'active' : null }}"><a href="{{ route('frontend.story.index') }}">My Story</a></li>
-                        <li><a href="#">Profile</a></li>
+                        <li><a href="{{ url('profile') }}">Profile</a></li>
                         <li>
                             <a href="{{ route('logout') }}" class="text-sm text-gray-700 underline" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">Logout</a>

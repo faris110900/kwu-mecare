@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Carbon;
 use App\Models\Pixel;
 use App\Models\Emosi;
 use App\Models\Faktor;
@@ -20,11 +21,15 @@ class PixelController extends Controller
      */
     public function index()
     {
-        return view('frontend.pixel.index');
+        $pixel = Pixel::all();
+        $pixelReact = PixelReact::all();
+
+        return view('frontend.pixel.index', compact('pixel', 'pixelReact'));
     }
 
-    public function home(){
-        
+    public function home()
+    {
+
         return view('frontend.pixel.home');
     }
 
@@ -37,19 +42,20 @@ class PixelController extends Controller
     {
         $emosi = Emosi::all();
         $faktor = Faktor::all();
-
+        $pixelReact = PixelReact::all();
         // dd($emosi);
 
-        return view('frontend.pixel.create', compact('faktor', 'emosi'));
+        return view('frontend.pixel.create', compact('faktor', 'emosi', 'pixelReact'));
     }
 
-    public function pixelCreate(){
+    public function pixelCreate()
+    {
         $pixelReact = PixelReact::all();
 
         return view('frontend.pixel.pixelReact', compact('pixelReact'));
     }
 
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -58,10 +64,34 @@ class PixelController extends Controller
      */
     public function store(Request $request)
     {
-        
+
+
+        $pixelReact = PixelReact::all();
+
+        $emosiCheckbox = "";
+        $faktorCheckbox = "";
+
+        if (!empty($request->input('emosi'))) {
+            if (!empty($request->input('faktor'))) {
+                $emosiCheckbox = join(',',$request->input('emosi'));
+                $faktorCheckbox = join(',',$request->input('faktor'));
+            } else
+                dd('gagal');
+        }
+
+        Pixel::create([
+            'user_id' => Auth::id(),
+            'pixel_id' => $request->get('pixel_id'),
+            'emosi' => $emosiCheckbox,
+            'faktor' => $faktorCheckbox,
+        ]);
+
+
+        return redirect()->route('frontend.pixel.index');
     }
 
-    public function pixelStore(Request $request){
+    public function pixelStore(Request $request)
+    {
 
         $sangatBuruk = "";
         $buruk = "";
@@ -69,15 +99,15 @@ class PixelController extends Controller
         $baik = "";
         $sangatBaik = "";
 
-        if ($request->get('sangat_buruk') == 'sangat_buruk' ) {
+        if ($request->get('sangat_buruk') == 'sangat_buruk') {
             $sangatBuruk = "sangat buruk";
         } else if ($request->get('buruk') == 'buruk') {
             $buruk = "buruk";
         } else if ($request->get('biasa') == 'biasa') {
             $biasa = "biasa";
-        } else if($request->get('baik') == 'baik'){
+        } else if ($request->get('baik') == 'baik') {
             $baik = "baik";
-        } else if($request->get('sangat_baik') == 'sangat_baik') {
+        } else if ($request->get('sangat_baik') == 'sangat_baik') {
             $sangatBaik = "sangat baik";
         } else {
             dd('gagal');
@@ -96,7 +126,6 @@ class PixelController extends Controller
         // dd($request);
 
         return redirect()->route('frontend.pixel.create');
-
     }
 
     /**

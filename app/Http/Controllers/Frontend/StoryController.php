@@ -12,6 +12,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Arr;
 
 class StoryController extends Controller
 {
@@ -24,15 +25,20 @@ class StoryController extends Controller
     public function index()
     {
         $stories = Auth::user()->id;
-        // $reacts = DB::table('reacts')
-        //         ->where('react_happy', '=', 'happy')
-        //         ->count();
-        $reactHappy = React::all()->where('react_happy', '=', 'happy')->count();
-        $reactSad = React::all()->where('react_sad', '=', 'sad')->count();
-        $reactCry = React::all()->where('react_cry', '=', 'cry')->count();
+        $react = React::all();
+        // $x = [];
+        // foreach ($react as $reactSad) {
+        //     array_push($x['sad'] = $reactSad);
+        // }
+        // dd($x);
+        
+        
+        $reactSad = React::all()->where('react_sad', '=', 'sad')->groupBy('story_id')->count();
+        $reactHappy = React::all()->where('react_happy', '=', 'happy')->groupBy('story_id')->count();
+        $reactCry = React::all()->where('react_cry', '=', 'cry')->groupBy('story_id')->count();
         // $stories = Story::orderBy('user_id')->get();
         $stories = auth()->user()->Storys;
-
+        
         return view('frontend.story.index', compact('stories', 'reactHappy', 'reactSad', 'reactCry'));
     }
 

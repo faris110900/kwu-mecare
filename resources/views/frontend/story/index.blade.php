@@ -44,15 +44,15 @@
                             <div class="col-lg-6" align="left">
                                 <a href="{{ route('frontend.story.show', $story) }}">Read more</a>
                                 <span class="text-muted ml-2"><i>{{ $story->created_at->diffForHumans() }}</i></span>
-                                <span class="ml-3">
+                                <span class="ml-1">
                                     <i class="far fa-smile-wink fa-1x" style="color : #00c9a7;"></i> 
                                     <small>{{ $reactHappy }}</small>
                                 </span>
-                                <span class="ml-3">
+                                <span class="ml-1">
                                     <i class="far fa-frown-open fa-1x" style="color: #825558;"></i>
                                     <small>{{ $reactSad }}</small>
                                 </span>
-                                <span class="ml-3">
+                                <span class="ml-1">
                                     <i class="far fa-sad-tear fa-1x" style="color: #e33737;"></i>
                                     <small>{{ $reactCry }}</small>
                                 </span>

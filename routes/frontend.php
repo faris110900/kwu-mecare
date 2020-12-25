@@ -7,7 +7,12 @@ Route::name('auth.')->group(function () {
     Route::group([
        'namespace' => 'Auth'
     ], function (){
+        
+        //Verifikasi Auth Route
         Route::get('verif', 'VerificationController@index')->middleware('verified')->name('verify');
+
+        //Profile Route
+        Route::resource('profile', 'ProfileController');
     });
 });
 

@@ -2388,3 +2388,68 @@ section {
   background: #7986BF;
   box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
 }
+
+.pixel-index {
+  margin-top: 100px;
+}
+
+.pixel-index .card-stats .card-body {
+  padding: 1rem 1.5rem;
+}
+
+.pixel-index .card-stats .card-status-bullet {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.my-profile{
+  margin-top: 50px;
+}
+
+.my-profile .btn-create{
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #25c196;
+  
+}
+
+.my-profile .btn-statis{
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #7986BF;
+
+}
+
+.my-profile h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #3e4450;
+}
+
+@media (max-width: 600px) {
+  .my-profile h1 {
+    font-size: 36px;
+  }
+
+  .my-profile h1 {
+    font-size: 15px;
+  }
+}
