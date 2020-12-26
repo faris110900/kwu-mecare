@@ -235,13 +235,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 content d-flex flex-column justify-content-center"  data-aos="fade-up" data-aos-duration="2000">
-                        <h3>Meditasi</h3>
+                        <h3>Mental Pixel</h3>
                         <h6 class="text-muted">
 
                         </h6><br>
                         <h6 class="mt-3 text-muted" style="font-size: 20px;">
-                            Tahukah kamu kesehatan mental sangat dipengaruhi oleh kualitas tidurmu? Afecto dilengkapi
-                            konten suara hujan, cerita tidur, sampai musik pengantar tidur.
+                        Membantumu untuk mentrack mood harianmu dan memberimu saran untuk menjaga kesehatan mentalmu.
                         </h6>
                         <div class="btn-group mt-3">
                             <a href="#about" class="btn-coba scrollto">Coba Sekarang</a>
