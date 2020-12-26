@@ -95,7 +95,7 @@
                         <div class="card-body">
                             <div class="chart">
                                 <!-- Chart wrapper -->
-                                <canvas id="myChart"></canvas>
+                                <canvas id="mood"></canvas>
                             </div>
                         </div>
                     </div>
@@ -156,7 +156,7 @@
         }
         ?>
 
-        var ctx = document.getElementById('myChart').getContext('2d');
+        var ctx = document.getElementById('mood').getContext('2d');
         var chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'line',
@@ -184,31 +184,31 @@
                         ticks: {
                             // beginAtZero: true,
                             callback: function(value, index, values) {
-                                // return yLabels[value];
-                                switch (value) {
-                                    case 5:
-                                        return 'Sangat Buruk';
-                                    break;
+                                return yLabels[value];
+                                // switch (value) {
+                                //     case 5:
+                                //         return 'Sangat Buruk';
+                                //     break;
 
-                                    case 4:
-                                        return 'Buruk';
-                                    break;
+                                //     case 4:
+                                //         return 'Buruk';
+                                //     break;
                                 
-                                    case 3: 
-                                        return 'Biasa';
-                                    break;
+                                //     case 3: 
+                                //         return 'Biasa';
+                                //     break;
 
-                                    case 2: 
-                                        return 'Baik';
-                                    break;
+                                //     case 2: 
+                                //         return 'Baik';
+                                //     break;
 
-                                    case 1: 
-                                        return 'Sangat Baik';
-                                    break;
+                                //     case 1: 
+                                //         return 'Sangat Baik';
+                                //     break;
 
-                                    default:
-                                        break;
-                                }
+                                //     default:
+                                //         break;
+                                // }
                             }
                         }
                     }]

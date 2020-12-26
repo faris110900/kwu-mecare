@@ -30,7 +30,7 @@ class ProfileController extends Controller
 
         $y = [];
         foreach ($pixel as $row) {
-            $pixelReact = PixelReact::where('id', $row->pixel_id)->where('user_id', $row->user_id)->first();
+            $pixelReact = PixelReact::where('user_id', $row->user_id)->first();
             $x['sangat_buruk'] = $pixelReact->sangat_buruk;
             $x['buruk'] = $pixelReact->buruk;
             $x['biasa'] = $pixelReact->biasa;

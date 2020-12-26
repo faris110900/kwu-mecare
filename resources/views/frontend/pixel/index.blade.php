@@ -6,9 +6,9 @@
 
     <section id="pixel-index" class="pixel-index ">
         <div class="container">
-            
+
             <div class="section-title-pixel" data-aos="fade-up">
-                <h2>Langganan</h2>
+                <h2>Moodmu Hari ini</h2>
             </div>
 
             <div class="row" data-aos="fade-up" data-aos-duration="1000">
@@ -24,7 +24,7 @@
                                         @elseif(isset($y[0]['buruk']))
                                             {{ $y[0]['buruk'] }}
                                         @elseif(isset($y[0]['biasa']))
-                                            {{ $y[0]['bias'] }}
+                                            {{ $y[0]['biasa'] }}
                                         @elseif(isset($y[0]['baik']))
                                             {{ $y[0]['baik'] }}
                                         @elseif(isset($y[0]['sangat_baik']))
@@ -41,7 +41,11 @@
                             </div>
                             <p class="mt-3 mb-0 text-muted text-sm">
 
-                                <span class="text-nowrap">{{ $pixel[0]->created_at->isoFormat('dddd') }}</span>
+                                <span class="text-nowrap">
+                                    @foreach ($pixel as $px)
+                                        {{ $px->created_at->isoFormat('dddd') }}
+                                    @endforeach
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -64,7 +68,12 @@
                             </div>
 
                             <p class="mt-3 mb-0 text-muted text-sm">
-                                <span class="text-nowrap">{{ $pixel[0]->created_at->isoFormat('dddd') }}</span>
+                                <span class="text-nowrap">
+                                    @foreach ($pixel as $px)
+                                        {{ $px->created_at->isoFormat('dddd') }}
+                                    @endforeach
+                                </span>
+
                             </p>
                         </div>
                     </div>
@@ -86,7 +95,12 @@
                                 </div>
                             </div>
                             <p class="mt-3 mb-0 text-muted text-sm">
-                                <span class="text-nowrap">{{ $pixel[0]->created_at->isoFormat('dddd') }}</span>
+                                <span class="text-nowrap">
+                                    @foreach ($pixel as $px)
+                                        {{ $px->created_at->isoFormat('dddd') }}
+                                    @endforeach
+                                </span>
+
                             </p>
                         </div>
                     </div>

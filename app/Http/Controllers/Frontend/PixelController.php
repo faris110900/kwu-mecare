@@ -26,7 +26,9 @@ class PixelController extends Controller
 
         $y = [];
         foreach ($pixel as $row) {
-            $pixelReact = PixelReact::where('id', $row->pixel_id)->where('user_id', $row->user_id)->first();
+            $pixelReact = PixelReact::all()->where('user_id', $row->user_id)->first();
+            // dd($pixelReact);
+            $x['user_id'] = $pixelReact->user_id;
             $x['sangat_buruk'] = $pixelReact->sangat_buruk;
             $x['buruk'] = $pixelReact->buruk;
             $x['biasa'] = $pixelReact->biasa;
@@ -34,8 +36,8 @@ class PixelController extends Controller
             $x['sangat_baik'] = $pixelReact->sangat_baik;
             array_push($y, $x);
         }
-        // dd($y);
-
+        // dd($pixelReact);
+        
         return view('frontend.pixel.index', compact('pixel', 'pixelReact', 'y'));
     }
 
