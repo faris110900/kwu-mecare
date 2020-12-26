@@ -197,7 +197,7 @@
                             bercerita tentang kecemasan, kecanduan hingga masalah percintaan.
                         </h6>
                         <div class="btn-group mt-3">
-                            <a href="#about" class="btn-coba scrollto">Coba Sekarang</a>
+                            <a href="{{ url('konseling') }}" class="btn-coba scrollto">Coba Sekarang</a>
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-duration="3000">
@@ -224,7 +224,7 @@
                             konten suara hujan, cerita tidur, sampai musik pengantar tidur.
                         </h6>
                         <div class="btn-group mt-3">
-                            <a href="#about" class="btn-coba scrollto">Coba Sekarang</a>
+                            <a href="{{ url('meditasi-home') }}" class="btn-coba scrollto">Coba Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -243,7 +243,7 @@
                         Membantumu untuk mentrack mood harianmu dan memberimu saran untuk menjaga kesehatan mentalmu.
                         </h6>
                         <div class="btn-group mt-3">
-                            <a href="#about" class="btn-coba scrollto">Coba Sekarang</a>
+                            <a href="{{ url('pixel-home') }}" class="btn-coba scrollto">Coba Sekarang</a>
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-duration="3000">
