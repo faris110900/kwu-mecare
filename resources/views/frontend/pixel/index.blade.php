@@ -19,15 +19,15 @@
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Moodku</h5>
                                     <span class="badge badge-info mt-3">
-                                        @if (isset($y[0]['sangat_buruk']))
+                                        @if (isset($y[0]['sangat_buruk']) && $y[0]['sangat_buruk'] != '' )
                                             {{ $y[0]['sangat_buruk'] }}
-                                        @elseif(isset($y[0]['buruk']))
+                                        @elseif(isset($y[0]['buruk']) && $y[0]['buruk'] != '')
                                             {{ $y[0]['buruk'] }}
-                                        @elseif(isset($y[0]['biasa']))
+                                        @elseif(isset($y[0]['biasa']) && $y[0]['biasa'] != '')
                                             {{ $y[0]['biasa'] }}
-                                        @elseif(isset($y[0]['baik']))
+                                        @elseif(isset($y[0]['baik']) && $y[0]['baik'] != '')
                                             {{ $y[0]['baik'] }}
-                                        @elseif(isset($y[0]['sangat_baik']))
+                                        @elseif(isset($y[0]['sangat_baik']) && $y[0]['sangat_baik'] != '')
                                             {{ $y[0]['sangat_baik'] }}
                                         @endif
 
