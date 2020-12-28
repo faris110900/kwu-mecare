@@ -46,8 +46,8 @@
                             <ul>
                                 <li>Berbagi Cerita</li>
                                 <li>Konsultasi</li>
+                                <li>Mental Pixel</li>
                                 <li class="na">Meditasi</li>
-                                <li class="na">Mental Pixel</li>
                             </ul>
                             <div class="btn-wrap">
                                 @if (Auth::check())
@@ -62,9 +62,51 @@
 
                     <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
                         <div class="box" data-aos="zoom-in" data-aos-delay="400">
-                            <span class="advanced">Advanced</span>
-                            <h3>Ultimate</h3>
-                            <h4><sup>Rp.</sup>200.000<span>/Bulan</span></h4>
+                            {{-- <span class="advanced">Advanced</span> --}}
+                            <h3>Primero</h3>
+                            <h4><sup>Rp.</sup>100k<span>/2 Minggu</span></h4>
+                            <ul>
+                                <li>Berbagi Cerita</li>
+                                <li>Konsultasi</li>
+                                <li>Meditasi</li>
+                                <li>Mental Pixel</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                @if (Auth::check())
+                                    <a href="" class="btn-buy" disabled>Beli</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="btn-buy">Beli</a>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                        <div class="box" data-aos="zoom-in" data-aos-delay="400">
+                            {{-- <span class="advanced">Advanced</span> --}}
+                            <h3>Segundo</h3>
+                            <h4><sup>Rp.</sup>250<span>/1 Bulan</span></h4>
+                            <ul>
+                                <li>Berbagi Cerita</li>
+                                <li>Konsultasi</li>
+                                <li>Meditasi</li>
+                                <li>Mental Pixel</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                @if (Auth::check())
+                                    <a href="" class="btn-buy" disabled>Beli</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="btn-buy">Beli</a>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                        <div class="box" data-aos="zoom-in" data-aos-delay="400">
+                            {{-- <span class="advanced">Advanced</span> --}}
+                            <h3>Tercero</h3>
+                            <h4><sup>Rp.</sup>650<span>/3 Bulan</span></h4>
                             <ul>
                                 <li>Berbagi Cerita</li>
                                 <li>Konsultasi</li>

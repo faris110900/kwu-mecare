@@ -14,7 +14,7 @@ class MeditasiController extends Controller
      */
     public function index()
     {
-        return view('frontend.proses.index');
+        return view('frontend.meditasi.index');
     }
 
     /**

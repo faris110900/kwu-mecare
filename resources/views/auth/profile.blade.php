@@ -40,8 +40,8 @@
                                 </div>
                             </div>
                             <p class="mt-3 mb-0 text-muted text-sm">
-                                {{-- <span class="text-nowrap">Since last month</span>
-                                --}}
+                                <span class="text-nowrap">Since last month</span>
+                               
                             </p>
                         </div>
                     </div>
@@ -54,15 +54,15 @@
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Mood Hari ini</h5>
                                     <span class="h4 font-weight-bold mb-0">
-                                        @if (isset($y[0]['sangat_buruk']))
+                                        @if (isset($y[0]['sangat_buruk']) && $y[0]['sangat_buruk'] != '' )
                                             {{ $y[0]['sangat_buruk'] }}
-                                        @elseif(isset($y[0]['buruk']))
+                                        @elseif(isset($y[0]['buruk']) && $y[0]['buruk'] != '')
                                             {{ $y[0]['buruk'] }}
-                                        @elseif(isset($y[0]['biasa']))
-                                            {{ $y[0]['bias'] }}
-                                        @elseif(isset($y[0]['baik']))
+                                        @elseif(isset($y[0]['biasa']) && $y[0]['biasa'] != '')
+                                            {{ $y[0]['biasa'] }}
+                                        @elseif(isset($y[0]['baik']) && $y[0]['baik'] != '')
                                             {{ $y[0]['baik'] }}
-                                        @elseif(isset($y[0]['sangat_baik']))
+                                        @elseif(isset($y[0]['sangat_baik']) && $y[0]['sangat_baik'] != '')
                                             {{ $y[0]['sangat_baik'] }}
                                         @endif
                                     </span>
