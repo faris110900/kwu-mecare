@@ -2612,8 +2612,8 @@ Calendar Styling */
   font-size: 18px;
 }
 
-.featured-services .title a {
-  color: #111;
+.featured-services .title {
+  color: #7986BF;
 }
 
 .featured-services .description {
@@ -2622,7 +2622,7 @@ Calendar Styling */
   margin-bottom: 0;
 }
 
-.featured-services .icon-box:hover .title a, .featured-services .icon-box:hover .description {
+.featured-services .icon-box:hover .title, .featured-services .icon-box:hover .description {
   color: #fff;
 }
 

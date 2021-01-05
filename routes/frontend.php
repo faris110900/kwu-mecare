@@ -26,7 +26,7 @@ Route::name('frontend.')->group(function () {
         Route::get('story-read/{story}/', 'StoryController@show')->name('story-read');
         Route::get('langganan', 'LanggananController@index')->name('langganan');
         Route::get('konseling', 'DoctorController@index')->name('konseling');
-        Route::get('meditasi-home', 'MeditasiController@index')->name('meditasi-home');
+        Route::get('meditasi-home', 'MeditasiController@home')->name('meditasi-home');
         Route::get('pixel-home', 'PixelController@home')->name('pixel-home');
     });
 });

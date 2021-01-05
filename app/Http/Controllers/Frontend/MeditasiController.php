@@ -12,9 +12,14 @@ class MeditasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(){
+        
         return view('frontend.meditasi.index');
+    }
+
+    public function home()
+    {
+        return view('frontend.meditasi.home');
     }
 
     /**

@@ -14,9 +14,9 @@
                 <div class="col-lg-6 mt-3 pt-5 pt-lg-0  d-flex flex-column justify-content-center" data-aos="fade-up"
                     data-aos-duration="1500">
                     <h1>Berlangganan</h1>
-                    <p class="mt-3 mb-3 text-muted" style="font-size: 20px;">
+                    <h6 class="mt-3 mb-3 text-muted" style="font-size: 20px;">
                         Dapatkan akses lebih dengan cara berlanganan dengan Afecto.
-                    </p>
+                    </h6>
                     <div class="section-btn">
                         <a href="#pricing" class="btn-baca-langganan scrollto">Selengkapnya</a>
                     </div>
