@@ -2629,3 +2629,31 @@ Calendar Styling */
 .featured-services .icon-box:hover .icon i {
   color: #fff;
 }
+
+.meditasi-instrumen {
+  margin-top: 50px;
+}
+
+.meditasi-instrumen .card img {
+  border-radius: 7px 7px 0px 0px;
+}
+
+.meditasi-instrumen .card {
+  width: 18rem;
+  border: none;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+}
+
+.meditasi-instrumen .card h5{
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #2c4964;
+}
+.meditasi-instrumen h3{
+  font-weight: 700;
+  font-size: 32px;
+  color: #5f687b;
+  margin-bottom: 40px;
+}
