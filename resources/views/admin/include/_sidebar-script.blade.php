@@ -127,6 +127,11 @@
                         <i class="fas fa-industry text-primary"></i> Faktor
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ url('/meditasi') }}">
+                        <i class="fas fa-music text-primary"></i> Music Meditasi
+                    </a>
+                </li>
             </ul>
 
         </div>

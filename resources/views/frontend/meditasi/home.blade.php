@@ -71,7 +71,7 @@
                   Dengan Meditasi kamu lebih bisa mengontrol emosi dan pikiranmu untuk jauh lebih tenang.
                 </h6>
                 <div class="btn-group mt-3">
-                    <a href="{{ route('frontend.meditasi.index') }}" class="btn-coba scrollto">Coba Sekarang</a>
+                    <a href="{{ url('/meditasi-list') }}" class="btn-coba scrollto">Coba Sekarang</a>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-duration="3000">

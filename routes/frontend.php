@@ -27,6 +27,7 @@ Route::name('frontend.')->group(function () {
         Route::get('langganan', 'LanggananController@index')->name('langganan');
         Route::get('konseling', 'DoctorController@index')->name('konseling');
         Route::get('meditasi-home', 'MeditasiController@home')->name('meditasi-home');
+        Route::get('meditasi-list', 'MeditasiController@list')->name('meditasi-list');
         Route::get('pixel-home', 'PixelController@home')->name('pixel-home');
     });
 });
@@ -64,7 +65,7 @@ Route::name('frontend.')->group(function () {
         // Route::get('cek-keadaan', 'CekController@index');
 
         //Meditasi Route
-        Route::resource('meditasi', 'MeditasiController');
+        Route::get('meditasi-show/{meditasi}', 'MeditasiController@show')->name('meditasi-show');
 
         //Pixel Route
         Route::resource('pixel', 'PixelController');
@@ -94,6 +95,10 @@ Route::name('frontend.')->group(function () {
         //Faktor Route Admin
         Route::resource('faktor', 'FaktorController');
         Route::get('faktor/{faktor}/delete', 'FaktorController@destroy')->name('faktor.delete');
+
+        //Meditasi Route Admin
+        Route::resource('meditasi', 'MeditasiController');
+        Route::get('meditasi/{meditasi}/delete', 'MeditasiController@destroy')->name('meditasi.delete');
 
        
     });

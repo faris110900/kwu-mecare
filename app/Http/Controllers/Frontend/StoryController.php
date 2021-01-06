@@ -51,7 +51,7 @@ class StoryController extends Controller
         // $stories = Story::orderBy('user_id')->get();
         $stories = auth()->user()->Storys;
         
-        return view('frontend.story.index', compact('stories', 'reactHappy', 'reactSad', 'reactCry', 'x', 'story'));
+        return view('frontend.story.index', compact('stories', 'x', 'story'));
     }
 
     public function home(){

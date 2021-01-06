@@ -9,63 +9,22 @@
             <h3>Suara Kegelapan</h3>
 
             <div class="row">
-                <div classs="col-lg-4">
-                    <div class="card ml-3">
-                        <img src="{{ asset('assets/img/meditasi/2.jpg') }}" class="img-fluid">
-                        <div class="card-body">
-                            <h5>Nuansa Malam</h5>
-                        </div>
+                @foreach ($meditasi as $md)
+                    <div classs="col-lg-4">
+                        <a href="{{ route('frontend.meditasi-show', $md) }}">
+                            <div class="card ml-3">
+                                <img src="{{ asset('storage/' . $md->image) }}" class="img-fluid">
+                                <div class="card-body">
+                                    <h5>{{ $md->name }}</h5>
+                                    <p>
+                                        {{ $md->deskripsi }}
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div classs="col-lg-4">
-                    <div class="card ml-3">
-                        <img src="{{ asset('assets/img/meditasi/3.jpg') }}" class="img-fluid">
-                        <div class="card-body">
-                            <h5>Nuansa Api Unggun</h5>
-                        </div>
-                    </div>
-                </div>
-                <div classs="col-lg-4">
-                    <div class="card ml-3">
-                        <img src="{{ asset('assets/img/meditasi/4.jpg') }}" class="img-fluid">
-                        <div class="card-body">
-                            <h5>Nuansa Angin</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                @endforeach
 
-        <div class="container mt-3">
-            <h3 style="margin-top: 40px;">
-                Suara Binatang
-            </h3>
-            
-            <div class="row">
-                <div classs="col-lg-4">
-                    <div class="card ml-3">
-                        <img src="{{ asset('assets/img/meditasi/2.jpg') }}" class="img-fluid">
-                        <div class="card-body">
-                            <h5>Nuansa Malam</h5>
-                        </div>
-                    </div>
-                </div>
-                <div classs="col-lg-4">
-                    <div class="card ml-3">
-                        <img src="{{ asset('assets/img/meditasi/3.jpg') }}" class="img-fluid">
-                        <div class="card-body">
-                            <h5>Nuansa Api Unggun</h5>
-                        </div>
-                    </div>
-                </div>
-                <div classs="col-lg-4">
-                    <div class="card ml-3">
-                        <img src="{{ asset('assets/img/meditasi/4.jpg') }}" class="img-fluid">
-                        <div class="card-body">
-                            <h5>Nuansa Angin</h5>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
