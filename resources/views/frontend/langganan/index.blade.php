@@ -73,7 +73,7 @@
                             </ul>
                             <div class="btn-wrap">
                                 @if (Auth::check())
-                                    <a href="" class="btn-buy" disabled>Beli</a>
+                                    <a href="{{ url('primero-checkout') }}" class="btn-buy" disabled>Beli</a>
                                 @else
                                     <a href="{{ route('login') }}" class="btn-buy">Beli</a>
                                 @endif

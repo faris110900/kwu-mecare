@@ -2657,3 +2657,80 @@ Calendar Styling */
   color: #5f687b;
   margin-bottom: 40px;
 }
+
+.checkout .caption p {
+  color: color: #5f687b;
+}
+
+.checkout .caption {
+  margin-bottom: 50px;
+}
+
+.checkout .card {
+  border: none;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.checkout .box {
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.checkout .box h3 {
+  font-weight: 400;
+  margin: -20px -20px 20px -20px;
+  padding: 20px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #7986BF;
+}
+
+.checkout .box h4 {
+  font-size: 36px;
+  color: #7986BF;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+
+.checkout .box h4 sup {
+  font-size: 20px;
+  top: -15px;
+  left: -3px;
+}
+
+.checkout .box h4 span {
+  color: #bababa;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.checkout .box ul {
+  padding: 0;
+  list-style: none;
+  color: #444444;
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.checkout .box ul li {
+  padding-bottom: 16px;
+}
+
+.checkout .box ul i {
+  color: #7986BF;
+  font-size: 18px;
+  padding-right: 4px;
+}
+
+.checkout .box ul .na {
+  color: #ccc;
+  text-decoration: line-through;
+}

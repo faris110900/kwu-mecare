@@ -73,6 +73,8 @@ Route::name('frontend.')->group(function () {
         Route::get('pixel-react', 'PixelController@pixelCreate')->name('pixel.react');
         Route::post('pixel-reaction', 'PixelController@pixelStore')->name('pixel.reaction');
 
+        Route::get('primero-checkout', 'LanggananController@primero')->name('primero');
+
     });
 });
 
