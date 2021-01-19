@@ -18,16 +18,8 @@ class LanggananController extends Controller
         return view('frontend.langganan.index');
     }
 
-    public function primero(){
-        return view('frontend.langganan.primero');
-    }
-
-    public function segundo(){
-        return view('frontend.langganan.segundo');
-    }
-
-    public function tercero(){
-        return view('frontend.langganan.tercero');
+    public function checkout(){
+        return view('frontend.langganan.checkout');
     }
 
     /**

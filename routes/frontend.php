@@ -27,7 +27,7 @@ Route::name('frontend.')->group(function () {
         Route::get('langganan', 'LanggananController@index')->name('langganan');
         Route::get('konseling', 'DoctorController@index')->name('konseling');
         Route::get('meditasi-home', 'MeditasiController@home')->name('meditasi-home');
-        Route::get('meditasi-list', 'MeditasiController@list')->name('meditasi-list');
+        
         Route::get('pixel-home', 'PixelController@home')->name('pixel-home');
     });
 });
@@ -66,6 +66,7 @@ Route::name('frontend.')->group(function () {
 
         //Meditasi Route
         Route::get('meditasi-show/{meditasi}', 'MeditasiController@show')->name('meditasi-show');
+        Route::get('meditasi-list', 'MeditasiController@list')->name('meditasi-list');
 
         //Pixel Route
         Route::resource('pixel', 'PixelController');
@@ -73,7 +74,7 @@ Route::name('frontend.')->group(function () {
         Route::get('pixel-react', 'PixelController@pixelCreate')->name('pixel.react');
         Route::post('pixel-reaction', 'PixelController@pixelStore')->name('pixel.reaction');
 
-        Route::get('primero-checkout', 'LanggananController@primero')->name('primero');
+        Route::get('checkout', 'LanggananController@checkout')->name('checkout');
 
     });
 });

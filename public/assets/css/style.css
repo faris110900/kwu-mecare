@@ -2734,3 +2734,22 @@ Calendar Styling */
   color: #ccc;
   text-decoration: line-through;
 }
+
+.checkout .btn-checkout {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #25c196;
+  box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+}
+
+.checkout .btn-checkout:hover {
+  background: #7986BF;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}

@@ -93,9 +93,37 @@
                                     </div>
                                 </div>
 
+
                                 <div class="form-group">
                                     <label>No Telp.</label>
                                     <input type="tel" class="form-control" placeholder="08000...">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="ovo" value="option1">
+                                                <label class="form-check-label" for="">
+                                                    <img src="{{ asset('assets/img/ovo.png') }}" width="70px">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input mt-2" type="radio" name="gopay" value="option2">
+                                                <label class="form-check-label" for="">
+                                                    <img src="{{ asset('assets/img/gopay.png') }}" width="90px">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" align="right">
+                                    <a href="" class="btn btn-checkout" value="save">Bayar</a>
                                 </div>
 
                             </form>
