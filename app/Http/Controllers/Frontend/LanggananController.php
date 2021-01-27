@@ -22,6 +22,11 @@ class LanggananController extends Controller
         return view('frontend.langganan.checkout');
     }
 
+    public function success(){
+
+        return view('frontend.langganan.success');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

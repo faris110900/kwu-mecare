@@ -123,7 +123,7 @@
                                 </div>
 
                                 <div class="form-group" align="right">
-                                    <a href="" class="btn btn-checkout" value="save">Bayar</a>
+                                    <a href="{{ url('success-checkout') }}" class="btn btn-checkout" value="save">Bayar</a>
                                 </div>
 
                             </form>

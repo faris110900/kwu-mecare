@@ -74,7 +74,9 @@ Route::name('frontend.')->group(function () {
         Route::get('pixel-react', 'PixelController@pixelCreate')->name('pixel.react');
         Route::post('pixel-reaction', 'PixelController@pixelStore')->name('pixel.reaction');
 
+        //Langganan Route
         Route::get('checkout', 'LanggananController@checkout')->name('checkout');
+        Route::get('success-checkout', 'LanggananController@success')->name('success');
 
     });
 });
