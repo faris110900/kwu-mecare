@@ -12,13 +12,13 @@
                 <div class="col-lg-6">
                     <div class="media">
                         <img src="https://bigheads.io/svg?accessory=roundGlasses&body=chest&circleColor=blue&clothing=dressShirt&clothingColor=white&eyebrows=angry&eyes=simple&faceMask=true&faceMaskColor=red&facialHair=stubble&graphic=react&hair=short&hairColor=brown&hat=beanie&hatColor=black&lashes=true&lipColor=purple&mask=false&mouth=lips&skinTone=brown"
-                            class="align-self-center mr-3" alt="...">
+                            class="align-self-center mr-3" width="200px" alt="...">
                         <div class="media-body ml-3">
                             <h1 class="mt-0">{{ Auth::user()->name }}</h1>
                             <p><i>"Jangan Berusaha"</i></p>
 
                             <a href="" class="btn btn-create mb-3">Edit Profile</a>
-                            <a href="{{ route('frontend.pixel.index') }}" class="btn btn-statis mb-3">Statisku</a>
+                        
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <p class="mt-3 mb-0 text-muted text-sm">
-                                <span class="text-nowrap">Since last month</span>
+                                {{-- <span class="text-nowrap">Since last month</span> --}}
                                
                             </p>
                         </div>
@@ -53,7 +53,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Mood Hari ini</h5>
-                                    <span class="h4 font-weight-bold mb-0">
+                                    <span class="badge badge-info mt-3">
                                         @if (isset($y[0]['sangat_buruk']) && $y[0]['sangat_buruk'] != '' )
                                             {{ $y[0]['sangat_buruk'] }}
                                         @elseif(isset($y[0]['buruk']) && $y[0]['buruk'] != '')
@@ -89,8 +89,80 @@
 
 
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-8">
+
+                    <section id="pixel-index" class="pixel-index ">
+                
+                            <div class="section-title-pixel" data-aos="fade-up">
+                                <h2>Moodmu Hari ini</h2>
+                            </div>
+                
+                            <div class="row" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="col-xl-4 col-lg-4">
+                                    <div class="card card-stats mb-4 mb-xl-0">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Emosi</h5>
+                                                    @foreach ($pixel as $px)
+                                                        <span class="badge badge-info mt-3">{{ $px->emosi }}</span>
+                                                    @endforeach
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                                                        <i class="fas fa-users"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <p class="mt-3 mb-0 text-muted text-sm">
+                                                <span class="text-nowrap">
+                                                    @foreach ($pixel as $px)
+                                                        {{ $px->created_at->isoFormat('dddd') }}
+                                                    @endforeach
+                                                </span>
+                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4">
+                                    <div class="card card-stats mb-4 mb-xl-0">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Faktor</h5>
+                                                    @foreach ($pixel as $px)
+                                                        <span class="badge badge-info mt-3">{{ $px->faktor }}</span>
+                                                    @endforeach
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                                                        <i class="fas fa-scroll"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="mt-3 mb-0 text-muted text-sm">
+                                                <span class="text-nowrap">
+                                                    @foreach ($pixel as $px)
+                                                        {{ $px->created_at->isoFormat('dddd') }}
+                                                    @endforeach
+                                                </span>
+                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                            </div>
+                    </section>
+
+                    <div class="section-title-canvas" data-aos="fade-up">
+                        <h2>Histori Grafik Mood</h2>
+                    </div>
+
                     <div class="card">
                         <div class="card-body">
                             <div class="chart">
@@ -111,7 +183,7 @@
                                 </h5>
                                 <div class="card-body">
                                     <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Tetap Lah mencoba dan terus semangat!.
                                     </p>
                                 </div>
                             </div>

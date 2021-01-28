@@ -101,7 +101,7 @@ class PixelController extends Controller
         ]);
 
 
-        return redirect()->route('frontend.pixel.index');
+        return redirect()->route('auth.profile.index');
     }
 
     public function pixelStore(Request $request)
