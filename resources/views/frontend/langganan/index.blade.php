@@ -46,7 +46,7 @@
                             <ul>
                                 <li>Berbagi Cerita</li>
                                 <li>Konsultasi</li>
-                                <li>Mental Pixel</li>
+                                <li>Mental Pixel<span class="text-muted"> / 1 Minggu</span></li>
                                 <li class="na">Meditasi</li>
                             </ul>
                             <div class="btn-wrap">
@@ -64,12 +64,12 @@
                         <div class="box" data-aos="zoom-in" data-aos-delay="400">
                             {{-- <span class="advanced">Advanced</span> --}}
                             <h3>Primero</h3>
-                            <h4><sup>Rp.</sup>100k<span>/2 Minggu</span></h4>
+                            <h4><sup>Rp.</sup>100k</h4>
                             <ul>
                                 <li>Berbagi Cerita</li>
                                 <li>Konsultasi</li>
-                                <li>Meditasi</li>
-                                <li>Mental Pixel</li>
+                                <li>Meditasi<span class="text-muted"> / 2 Minggu</span></li>
+                                <li>Mental Pixel<span class="text-muted"> / 2 Minggu</span></li>
                             </ul>
                             <div class="btn-wrap">
                                 @if (Auth::check())
@@ -85,12 +85,12 @@
                         <div class="box" data-aos="zoom-in" data-aos-delay="400">
                             {{-- <span class="advanced">Advanced</span> --}}
                             <h3>Segundo</h3>
-                            <h4><sup>Rp.</sup>250<span>/1 Bulan</span></h4>
+                            <h4><sup>Rp.</sup>250</h4>
                             <ul>
                                 <li>Berbagi Cerita</li>
                                 <li>Konsultasi</li>
-                                <li>Meditasi</li>
-                                <li>Mental Pixel</li>
+                                <li>Meditasi<span class="text-muted"> / 1 Bulan</span></li>
+                                <li>Mental Pixel<span class="text-muted"> / 1 Bulan</span></li>
                             </ul>
                             <div class="btn-wrap">
                                 @if (Auth::check())
